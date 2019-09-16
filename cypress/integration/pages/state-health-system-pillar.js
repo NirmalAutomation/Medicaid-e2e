@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-export class SystemHealthSystem {
+export class SystemHealthSystemPillar {
 
     breadcrumbs() {
         cy.get('.breadcrumb')
@@ -60,7 +60,7 @@ export class SystemHealthSystem {
             .should('contain', 'Follow-Up After Hospitalization for Mental Illness: Ages 6-20')
             .and('contain', 'Promote Effective Communication & Coordination of Care');
 
-        cy.get('tbody>tr').eq(0)
+        cy.get('tbody>tr').eq(1)
             .should('contain', 'States')
             .and('contain', 'Reporting')
             .and('contain', '44')
