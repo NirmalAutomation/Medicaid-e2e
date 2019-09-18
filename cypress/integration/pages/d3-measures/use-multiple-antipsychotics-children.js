@@ -2,6 +2,12 @@
 
 export class AntipsychoticsChildren {
 
+    // Measure title
+    measureTitle() {
+        cy.get('h1')
+            .should('contain', 'Use of Multiple Concurrent Antipsychotics in Children & Adolescents');
+    }
+
     // Median Rate
     medianRate() {
         cy.get('.median-text')
@@ -70,7 +76,7 @@ export class AntipsychoticsChildren {
             .then(() => {
 
                 cy.get('.tooltip-text')
-                    .should('contain', "WY: Rate includes FFS population.")
+                    .should('contain', "WY: Rate includes FFS population.");
             })
     }
 

@@ -2,12 +2,6 @@
 
 export class Pillar1Measure {
 
-
-    measureTitle() {
-        cy.get('h1')
-            .should('contain', 'Use of Multiple Concurrent Antipsychotics in Children & Adolescents');
-    }
-
     visitThePillar() {
         cy.get('.pillarNav')
             .should('contain', 'VISIT THE PILLAR: ')

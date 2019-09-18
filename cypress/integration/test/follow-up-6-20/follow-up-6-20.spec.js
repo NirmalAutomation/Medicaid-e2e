@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
-import { antipsychoticsChildren } from "../../pages/d3-measures/use-multiple-antipsychotics-children"
+import { followUp6To20 } from "../../pages/d3-measures/follow-up-6-20"
 import { pillar1Measure } from "../../pages/pillar-1-measure"
 
 beforeEach(() => {
@@ -10,13 +10,13 @@ beforeEach(() => {
 
 Given('User visits the measure page', () => {
 
-    cy.visit('/state-overviews/scorecard/use-multiple-antipsychotics-children/index.html');
+    cy.visit('/state-overviews/scorecard/follow-up-after-hospitalization-mental-illness-ages-6-20/index.html');
 
 })
 
 When('User inspects the measure title', () => {
 
-    antipsychoticsChildren.measureTitle();
+    followUp6To20.measureTitle();
 
 })
 
@@ -141,9 +141,15 @@ Then('User sees X axis bottom percentile', () => {
 
 })
 
-When('User validates the median rate', () => {
+When('User validates the 7 day median rate', () => {
 
-    antipsychoticsChildren.medianRate();
+    followUp6To20.medianRate7Day();
+
+})
+
+When('User validates the 30 day median rate', () => {
+
+    followUp6To20.medianRate30Day();
 
 })
 
@@ -153,9 +159,9 @@ Then('User sees 51 states list', () => {
 
 })
 
-Then('User sees state rates based on A to Z order', () => {
+When('User inspects the Chip only population legend', () => {
 
-    antipsychoticsChildren.rateList();
+    pillar1Measure.colorOfChipOnly();
 
 })
 
@@ -171,26 +177,71 @@ When('User inspects the Medicaid and Chip population legend', () => {
 
 })
 
-Then('User sees the Wyoming State Specific Comment', () => {
+Then('User clicks on 30 day follow up toggle button', () => {
 
-    antipsychoticsChildren.stateSpecificWY();
-
-})
-
-Then('User sees the Washington State Specific Comment', () => {
-
-    antipsychoticsChildren.stateSpecificWA();
+    followUp6To20.toggle30DayFollow();
 
 })
 
-Then('User sees the Alabama State Specific Comment', () => {
+Then('User sees the 7 day Wyoming State Specific Comment', () => {
 
-    antipsychoticsChildren.stateSpecificAL();
+    followUp6To20.stateSpecificWY7Day();
+
+})
+
+Then('User sees the 7 day Washington State Specific Comment', () => {
+
+    followUp6To20.stateSpecificWA7Day();
 
 })
 
-Then('User sees the Connecticut State Specific Comment', () => {
+Then('User sees the 7 day Alabama State Specific Comment', () => {
 
-    antipsychoticsChildren.stateSpecificCT();
+    followUp6To20.stateSpecificAL7Day();
 
 })
+
+Then('User sees the 7 day Connecticut State Specific Comment', () => {
+
+    followUp6To20.stateSpecificCT7Day();
+
+})
+
+Then('User sees the 30 day Wyoming State Specific Comment', () => {
+
+    followUp6To20.stateSpecificWY30Day();
+
+})
+
+Then('User sees the 30 day Washington State Specific Comment', () => {
+
+    followUp6To20.stateSpecificWA30Day();
+
+})
+
+Then('User sees the 30 day Alabama State Specific Comment', () => {
+
+    followUp6To20.stateSpecificAL30Day();
+
+})
+
+Then('User sees the 30 day Connecticut State Specific Comment', () => {
+
+    followUp6To20.stateSpecificCT30Day();
+
+})
+
+Then('User sees 7 day state rates based on A to Z order', () => {
+
+    followUp6To20.rateList7Day();
+
+})
+
+Then('User sees 30 day state rates based on A to Z order', () => {
+
+    followUp6To20.rateList30Day();
+
+})
+
+
+
