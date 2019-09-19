@@ -1,5 +1,5 @@
-Feature: Use of Multiple Concurrent Antipsychotics in Children & Adolescents
-    Description: The purpose of this feature is to test components in the Use of Multiple Concurrent Antipsychotics in Children & Adolescents measure page
+Feature: Percentage of Long-stay Nursing Home Residents who got an Antipsychotic Medication
+    Description: The purpose of this feature is to test components in the Percentage of Long-stay Nursing Home Residents who got an Antipsychotic Medication
 
     # User type is Website visitor
     Scenario: Verify the elements in legend box
@@ -26,7 +26,6 @@ Feature: Use of Multiple Concurrent Antipsychotics in Children & Adolescents
         When User inspects style of Rate text
         When User inspects style of Median
         Then User inspects color of Median line
-        Then User inspects color of NR
         Then User inspects color of bars
 
     Scenario: Verify the values on visualization
@@ -35,14 +34,11 @@ Feature: Use of Multiple Concurrent Antipsychotics in Children & Adolescents
         Then User sees X axis top percentile
         Then User sees X axis bottom percentile
         When User validates the median rate
-        Then User sees 51 states list
+        Then User sees 51 states and 2 Unions list
         Then User sees state rates based on A to Z order
-        When User inspects the Medicaid only population legend
-        When User inspects the Medicaid and Chip population legend
+        When User inspects the Medicaid or Medicaid legend
 
     Scenario: Verify the State Specific Comment for 4 states
         Given User visits the measure page
         Then User sees the Wyoming State Specific Comment
-        Then User sees the Washington State Specific Comment
-        Then User sees the Alabama State Specific Comment
-        Then User sees the Connecticut State Specific Comment
+       

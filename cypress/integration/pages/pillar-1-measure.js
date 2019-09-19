@@ -8,12 +8,6 @@ export class Pillar1Measure {
             .and('contain', 'State Health System Performance');
     }
 
-    visitTheDomain() {
-        cy.get('.domainNav')
-            .should('contain', 'VISIT THE DOMAIN: ')
-            .and('contain', 'Promote Effective Communication & Coordination of Care');
-    }
-
     learnMore() {
 
         cy.get('.expand_measure_description')
@@ -227,9 +221,9 @@ export class Pillar1Measure {
             .should('have.css', 'fill', 'rgb(134, 32, 116)');
     }
 
-    colorOfMedicaidChipDual() {
+    colorOfMedicaidDual() {
         cy.get('.bar-top.bar-top-population-3')
-            .should('have.css', 'fill', 'rgb(202, 83, 34)');
+            .should('have.css', 'fill', 'rgb(202, 77, 34)');
     }
 
     colorOfMedicaidChipDual() {
@@ -244,4 +238,4 @@ export class Pillar1Measure {
 
 }
 
-export const pillar1Measure = new Pillar1Measure();
+export const pillar1Measure = new Pillar1Measure()

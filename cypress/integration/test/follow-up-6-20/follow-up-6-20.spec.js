@@ -28,7 +28,7 @@ Then('User sees VISIT THE PILLAR', () => {
 
 Then('User sees VISIT THE DOMAIN', () => {
 
-    pillar1Measure.visitTheDomain();
+    followUp6To20.visitTheDomain();
 
 })
 
@@ -242,6 +242,3 @@ Then('User sees 30 day state rates based on A to Z order', () => {
     followUp6To20.rateList30Day();
 
 })
-
-
-

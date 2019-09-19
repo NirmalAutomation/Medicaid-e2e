@@ -8,6 +8,13 @@ export class AntipsychoticsChildren {
             .should('contain', 'Use of Multiple Concurrent Antipsychotics in Children & Adolescents');
     }
 
+    // VISIT THE DOMAIN
+    visitTheDomain() {
+        cy.get('.domainNav')
+            .should('contain', 'VISIT THE DOMAIN: ')
+            .and('contain', 'Promote Effective Communication & Coordination of Care');
+    }
+
     // Median Rate
     medianRate() {
         cy.get('.median-text')

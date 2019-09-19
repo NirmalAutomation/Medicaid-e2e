@@ -1,5 +1,5 @@
-Feature: Use of Multiple Concurrent Antipsychotics in Children & Adolescents
-    Description: The purpose of this feature is to test components in the Use of Multiple Concurrent Antipsychotics in Children & Adolescents measure page
+Feature: Prenatal & Postpartum Care: Postpartum Care
+    Description: The purpose of this feature is to test components in the Prenatal & Postpartum Care: Postpartum Care page
 
     # User type is Website visitor
     Scenario: Verify the elements in legend box
@@ -39,10 +39,10 @@ Feature: Use of Multiple Concurrent Antipsychotics in Children & Adolescents
         Then User sees state rates based on A to Z order
         When User inspects the Medicaid only population legend
         When User inspects the Medicaid and Chip population legend
+        When User inspects the Medicaid and Dual population legend
+        When User inspects the Medicaid CHIP and Dual population legend
 
     Scenario: Verify the State Specific Comment for 4 states
         Given User visits the measure page
         Then User sees the Wyoming State Specific Comment
-        Then User sees the Washington State Specific Comment
-        Then User sees the Alabama State Specific Comment
-        Then User sees the Connecticut State Specific Comment
+

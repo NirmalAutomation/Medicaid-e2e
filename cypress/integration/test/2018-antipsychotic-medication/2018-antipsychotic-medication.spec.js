@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
-import { antipsychoticsChildren } from "../../pages/d3-measures/use-multiple-antipsychotics-children"
+import { antipsychoticMedication } from "../../pages/d3-measures/2018-antipsychotic-measure-21"
 import { pillar1Measure } from "../../pages/pillar-1-measure"
 
 beforeEach(() => {
@@ -10,13 +10,13 @@ beforeEach(() => {
 
 Given('User visits the measure page', () => {
 
-    cy.visit('/state-overviews/scorecard/use-multiple-antipsychotics-children/index.html');
+    cy.visit('/state-overviews/scorecard/long-term-nursing-home-residents-antipsychotic-medication/index.html');
 
 })
 
 When('User inspects the measure title', () => {
 
-    antipsychoticsChildren.measureTitle();
+    antipsychoticMedication.measureTitle();
 
 })
 
@@ -28,7 +28,7 @@ Then('User sees VISIT THE PILLAR', () => {
 
 Then('User sees VISIT THE DOMAIN', () => {
 
-    antipsychoticsChildren.visitTheDomain();
+    antipsychoticMedication.visitTheDomain();
 
 })
 
@@ -111,12 +111,6 @@ Then('User inspects color of Median line', () => {
 
 })
 
-Then('User inspects color of NR', () => {
-
-    pillar1Measure.colorOfNR();
-
-})
-
 Then('User inspects color of bars', () => {
 
     pillar1Measure.colorOfBars();
@@ -143,54 +137,30 @@ Then('User sees X axis bottom percentile', () => {
 
 When('User validates the median rate', () => {
 
-    antipsychoticsChildren.medianRate();
+    antipsychoticMedication.medianRate();
 
 })
 
-Then('User sees 51 states list', () => {
+Then('User sees 51 states and 2 Unions list', () => {
 
-    pillar1Measure.stateListQuality();
+    antipsychoticMedication.stateAndUnionList();
 
 })
 
 Then('User sees state rates based on A to Z order', () => {
 
-    antipsychoticsChildren.rateList();
+    antipsychoticMedication.rateList();
 
 })
 
-When('User inspects the Medicaid only population legend', () => {
+When('User inspects the Medicaid or Medicaid legend', () => {
 
-    pillar1Measure.colorOfMedicaidOnly();
-
-})
-
-When('User inspects the Medicaid and Chip population legend', () => {
-
-    pillar1Measure.colorOfMedicaidAndChip();
+    pillar1Measure.colorOfMedicareOrMedicaid();
 
 })
 
 Then('User sees the Wyoming State Specific Comment', () => {
 
-    antipsychoticsChildren.stateSpecificWY();
-
-})
-
-Then('User sees the Washington State Specific Comment', () => {
-
-    antipsychoticsChildren.stateSpecificWA();
-
-})
-
-Then('User sees the Alabama State Specific Comment', () => {
-
-    antipsychoticsChildren.stateSpecificAL();
-
-})
-
-Then('User sees the Connecticut State Specific Comment', () => {
-
-    antipsychoticsChildren.stateSpecificCT();
+    antipsychoticMedication.stateSpecificWY();
 
 })

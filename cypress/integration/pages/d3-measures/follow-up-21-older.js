@@ -8,6 +8,13 @@ export class FollowUp21Older {
             .should('contain', 'Follow-Up After Hospitalization for Mental Illness: Age 21 & Older');
     }
 
+    // VISIT THE DOMAIN
+    visitTheDomain() {
+        cy.get('.domainNav')
+            .should('contain', 'VISIT THE DOMAIN: ')
+            .and('contain', 'Promote Effective Communication & Coordination of Care');
+    }
+
     // Median Rate
     medianRate7Day() {
         cy.get('.median-text')
@@ -22,7 +29,7 @@ export class FollowUp21Older {
     // Rate List
     rateList7Day() {
         cy.get('.chart-axisRight')
-            .should('contain', 'NR%')
+            .should('contain', 'NR')
             .and('contain', '38.5%')
             .and('contain', '31.7%')
             .and('contain', '41.4%')
@@ -77,58 +84,58 @@ export class FollowUp21Older {
 
     rateList30Day() {
         cy.get('.chart-axisRight')
-        .should('contain', 'NR%')
-        .and('contain', '55.3%')
-        .and('contain', '53.3%')
-        .and('contain', '61.7%')
-        .and('contain', '67.0%')
-        .and('contain', 'NR')
-        .and('contain', '70.4%')
-        .and('contain', '73.3%')
-        .and('contain', '47.3%')
-        .and('contain', '51.1%')
-        .and('contain', '51.5%')
-        .and('contain', '55.4%')
-        .and('contain', '59.8%')
-        .and('contain', 'NR')
-        .and('contain', '42.5%')
-        .and('contain', 'NR')
-        .and('contain', '76.5%')
-        .and('contain', '56.6%')
-        .and('contain', '39.3%')
-        .and('contain', '74.0%')
-        .and('contain', '60.3%')
-        .and('contain', 'NR')
-        .and('contain', '65.6%')
-        .and('contain', '62.9%')
-        .and('contain', '37.9%')
-        .and('contain', '59.4%')
-        .and('contain', 'NR')
-        .and('contain', '46.1%')
-        .and('contain', 'NR')
-        .and('contain', '72.5%')
-        .and('contain', '71.7%')
-        .and('contain', '32.4%')
-        .and('contain', '61.6%')
-        .and('contain', '49.8%')
-        .and('contain', '61.4%')
-        .and('contain', '65.3%')
-        .and('contain', '39.5%')
-        .and('contain', 'NR')
-        .and('contain', '56.0%')
-        .and('contain', '74.9%')
-        .and('contain', '52.4%')
-        .and('contain', '56.8%')
-        .and('contain', '57.2%')
-        .and('contain', '38.9%')
-        .and('contain', '75.9%')
-        .and('contain', 'NR')
-        .and('contain', '69.8%')
-        .and('contain', '82.1%')
-        .and('contain', '66.2%')
-        .and('contain', '33.7%')
-        .and('contain', '57.8%');
-}
+            .should('contain', 'NR')
+            .and('contain', '55.3%')
+            .and('contain', '53.3%')
+            .and('contain', '61.7%')
+            .and('contain', '67.0%')
+            .and('contain', 'NR')
+            .and('contain', '70.4%')
+            .and('contain', '73.3%')
+            .and('contain', '47.3%')
+            .and('contain', '51.1%')
+            .and('contain', '51.5%')
+            .and('contain', '55.4%')
+            .and('contain', '59.8%')
+            .and('contain', 'NR')
+            .and('contain', '42.5%')
+            .and('contain', 'NR')
+            .and('contain', '76.5%')
+            .and('contain', '56.6%')
+            .and('contain', '39.3%')
+            .and('contain', '74.0%')
+            .and('contain', '60.3%')
+            .and('contain', 'NR')
+            .and('contain', '65.6%')
+            .and('contain', '62.9%')
+            .and('contain', '37.9%')
+            .and('contain', '59.4%')
+            .and('contain', 'NR')
+            .and('contain', '46.1%')
+            .and('contain', 'NR')
+            .and('contain', '72.5%')
+            .and('contain', '71.7%')
+            .and('contain', '32.4%')
+            .and('contain', '61.6%')
+            .and('contain', '49.8%')
+            .and('contain', '61.4%')
+            .and('contain', '65.3%')
+            .and('contain', '39.5%')
+            .and('contain', 'NR')
+            .and('contain', '56.0%')
+            .and('contain', '74.9%')
+            .and('contain', '52.4%')
+            .and('contain', '56.8%')
+            .and('contain', '57.2%')
+            .and('contain', '38.9%')
+            .and('contain', '75.9%')
+            .and('contain', 'NR')
+            .and('contain', '69.8%')
+            .and('contain', '82.1%')
+            .and('contain', '66.2%')
+            .and('contain', '33.7%')
+            .and('contain', '57.8%');
+    }
 
     // 7-day follow up
     toggle7DayFollow() {
@@ -138,39 +145,12 @@ export class FollowUp21Older {
     }
 
     // State Specific Comments
-    stateSpecificWY() {
+    stateSpecificWY7Day() {
         cy.get('.bar-alt').eq(0).trigger('mouseover')
             .then(() => {
 
                 cy.get('.tooltip-text')
-                    .should('contain', "WY: Medicaid rates include FFS population. CHIP rates include managed care population (1 MCO) ages 6 to 18. Population: CHIP only State Rate: #")
-            })
-    }
-
-    stateSpecificVA() {
-        cy.get('.bar').eq(1).trigger('mouseover')
-            .then(() => {
-
-                cy.get('.tooltip-text')
-                    .should('contain', "VA: Rates include managed care population (6 MCOs) age 6 and older. State obtained rates from the NCQA Quality Compass and denominator is not available.");
-            })
-    }
-
-    stateSpecificAL() {
-        cy.get('.bar').eq(24).trigger('mouseover')
-            .then(() => {
-
-                cy.get('.tooltip-text')
-                    .should('contain', "AL: Medicaid rates include FFS and PCCM populations. CHIP rates include separate CHIP population. Rates exclude children enrolled in Medicaid-expansion CHIP; these children are included in the state's Medicaid rates. Population: CHIP only State Rate: 34.7");
-            })
-    }
-
-    stateSpecificCT() {
-        cy.get('.bar-alt').eq(22).trigger('mouseover')
-            .then(() => {
-
-                cy.get('.tooltip-text')
-                    .should('contain', "CT: Rates include FFS population. Rates were audited by a certified HEDIS auditor.");
+                    .should('contain', "WY: Rates include FFS population.")
             })
     }
 
@@ -182,42 +162,15 @@ export class FollowUp21Older {
     }
 
     // State Specific Comments
-    stateSpecificWY() {
+    stateSpecificWY30Day() {
         cy.get('.bar-alt').eq(0).trigger('mouseover')
             .then(() => {
 
                 cy.get('.tooltip-text')
-                    .should('contain', "WY: Medicaid rates include FFS population. CHIP rates include managed care population (1 MCO) ages 6 to 18. Population: CHIP only State Rate: #");
-            })
-    }
-
-    stateSpecificVA() {
-        cy.get('.bar').eq(1).trigger('mouseover')
-            .then(() => {
-
-                cy.get('.tooltip-text')
-                    .should('contain', "VA: Rates include managed care population (6 MCOs) age 6 and older. State obtained rates from the NCQA Quality Compass and denominator is not available.");
-            })
-    }
-
-    stateSpecificAL() {
-        cy.get('.bar').eq(24).trigger('mouseover')
-            .then(() => {
-
-                cy.get('.tooltip-text')
-                    .should('contain', "AL: Medicaid rates include FFS and PCCM populations. CHIP rates include separate CHIP population. Rates exclude children enrolled in Medicaid-expansion CHIP; these children are included in the state's Medicaid rates. Population: CHIP only State Rate: 56.8");
-            })
-    }
-
-    stateSpecificCT() {
-        cy.get('.bar-alt').eq(22).trigger('mouseover')
-            .then(() => {
-
-                cy.get('.tooltip-text')
-                    .should('contain', "CT: Rates include FFS population. Rates were audited by a certified HEDIS auditor.");
+                    .should('contain', "WY: Rates include FFS population.");
             })
     }
 
 }
 
-export const followUp6To20 = new FollowUp6To20();
+export const followUp21Older = new FollowUp21Older();

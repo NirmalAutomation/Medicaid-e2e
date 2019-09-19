@@ -1,5 +1,5 @@
-Feature: Use of Multiple Concurrent Antipsychotics in Children & Adolescents
-    Description: The purpose of this feature is to test components in the Use of Multiple Concurrent Antipsychotics in Children & Adolescents measure page
+Feature: Live Births Weighing Less Than 2,500 Grams
+    Description: The purpose of this feature is to test components in the Live Births Weighing Less Than 2,500 Grams page
 
     # User type is Website visitor
     Scenario: Verify the elements in legend box
@@ -42,7 +42,5 @@ Feature: Use of Multiple Concurrent Antipsychotics in Children & Adolescents
 
     Scenario: Verify the State Specific Comment for 4 states
         Given User visits the measure page
-        Then User sees the Wyoming State Specific Comment
-        Then User sees the Washington State Specific Comment
-        Then User sees the Alabama State Specific Comment
-        Then User sees the Connecticut State Specific Comment
+        Then User sees the West Virginia State Specific Comment
+        

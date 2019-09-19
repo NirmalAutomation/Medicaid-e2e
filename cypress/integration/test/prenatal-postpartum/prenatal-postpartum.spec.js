@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
-import { antipsychoticsChildren } from "../../pages/d3-measures/use-multiple-antipsychotics-children"
+import { prenatalPostpartum } from "../../pages/d3-measures/prenatal-postpartum"
 import { pillar1Measure } from "../../pages/pillar-1-measure"
 
 beforeEach(() => {
@@ -10,13 +10,13 @@ beforeEach(() => {
 
 Given('User visits the measure page', () => {
 
-    cy.visit('/state-overviews/scorecard/use-multiple-antipsychotics-children/index.html');
+    cy.visit('/state-overviews/scorecard/postpartum-care/index.html');
 
 })
 
 When('User inspects the measure title', () => {
 
-    antipsychoticsChildren.measureTitle();
+    prenatalPostpartum.measureTitle();
 
 })
 
@@ -28,7 +28,7 @@ Then('User sees VISIT THE PILLAR', () => {
 
 Then('User sees VISIT THE DOMAIN', () => {
 
-    antipsychoticsChildren.visitTheDomain();
+    prenatalPostpartum.visitTheDomain();
 
 })
 
@@ -143,7 +143,7 @@ Then('User sees X axis bottom percentile', () => {
 
 When('User validates the median rate', () => {
 
-    antipsychoticsChildren.medianRate();
+    prenatalPostpartum.medianRate();
 
 })
 
@@ -155,7 +155,19 @@ Then('User sees 51 states list', () => {
 
 Then('User sees state rates based on A to Z order', () => {
 
-    antipsychoticsChildren.rateList();
+    prenatalPostpartum.rateList();
+
+})
+
+When('User inspects the Medicaid and Dual population legend', () => {
+
+    pillar1Measure.colorOfMedicaidDual();
+
+})
+
+When('User inspects the Medicaid CHIP and Dual population legend', () => {
+
+    pillar1Measure.colorOfMedicaidChipDual();
 
 })
 
@@ -173,24 +185,6 @@ When('User inspects the Medicaid and Chip population legend', () => {
 
 Then('User sees the Wyoming State Specific Comment', () => {
 
-    antipsychoticsChildren.stateSpecificWY();
-
-})
-
-Then('User sees the Washington State Specific Comment', () => {
-
-    antipsychoticsChildren.stateSpecificWA();
-
-})
-
-Then('User sees the Alabama State Specific Comment', () => {
-
-    antipsychoticsChildren.stateSpecificAL();
-
-})
-
-Then('User sees the Connecticut State Specific Comment', () => {
-
-    antipsychoticsChildren.stateSpecificCT();
+    prenatalPostpartum.stateSpecificWY();
 
 })

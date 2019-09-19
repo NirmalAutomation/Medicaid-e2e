@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
-import { antipsychoticsChildren } from "../../pages/d3-measures/use-multiple-antipsychotics-children"
+import { followUp21Older } from "../../pages/d3-measures/follow-up-21-older"
 import { pillar1Measure } from "../../pages/pillar-1-measure"
 
 beforeEach(() => {
@@ -10,13 +10,13 @@ beforeEach(() => {
 
 Given('User visits the measure page', () => {
 
-    cy.visit('/state-overviews/scorecard/use-multiple-antipsychotics-children/index.html');
+    cy.visit('/state-overviews/scorecard/follow-up-after-hospitalization-mental-illness-age-21/index.html');
 
 })
 
 When('User inspects the measure title', () => {
 
-    antipsychoticsChildren.measureTitle();
+    followUp21Older.measureTitle();
 
 })
 
@@ -28,7 +28,7 @@ Then('User sees VISIT THE PILLAR', () => {
 
 Then('User sees VISIT THE DOMAIN', () => {
 
-    antipsychoticsChildren.visitTheDomain();
+    followUp21Older.visitTheDomain();
 
 })
 
@@ -117,7 +117,7 @@ Then('User inspects color of NR', () => {
 
 })
 
-Then('User inspects color of bars', () => {
+Then('User inspects colot of bars', () => {
 
     pillar1Measure.colorOfBars();
 
@@ -141,9 +141,15 @@ Then('User sees X axis bottom percentile', () => {
 
 })
 
-When('User validates the median rate', () => {
+When('User validates the 7 day median rate', () => {
 
-    antipsychoticsChildren.medianRate();
+    followUp21Older.medianRate7Day();
+
+})
+
+When('User validates the 30 day median rate', () => {
+
+    followUp21Older.medianRate30Day();
 
 })
 
@@ -153,9 +159,15 @@ Then('User sees 51 states list', () => {
 
 })
 
-Then('User sees state rates based on A to Z order', () => {
+When('User inspects the Medicaid and Dual population legend', () => {
 
-    antipsychoticsChildren.rateList();
+    pillar1Measure.colorOfMedicaidDual();
+
+})
+
+When('User inspects the Medicaid CHIP and Dual population legend', () => {
+
+    pillar1Measure.colorOfMedicaidChipDual();
 
 })
 
@@ -171,26 +183,32 @@ When('User inspects the Medicaid and Chip population legend', () => {
 
 })
 
-Then('User sees the Wyoming State Specific Comment', () => {
+Then('User clicks on 30 day follow up toggle button', () => {
 
-    antipsychoticsChildren.stateSpecificWY();
-
-})
-
-Then('User sees the Washington State Specific Comment', () => {
-
-    antipsychoticsChildren.stateSpecificWA();
+    followUp21Older.toggle30DayFollow();
 
 })
 
-Then('User sees the Alabama State Specific Comment', () => {
+Then('User sees the 7 day Wyoming State Specific Comment', () => {
 
-    antipsychoticsChildren.stateSpecificAL();
+    followUp21Older.stateSpecificWY7Day();
 
 })
 
-Then('User sees the Connecticut State Specific Comment', () => {
+Then('User sees the 30 day Wyoming State Specific Comment', () => {
 
-    antipsychoticsChildren.stateSpecificCT();
+    followUp21Older.stateSpecificWY30Day();
+
+})
+
+Then('User sees 7 day state rates based on A to Z order', () => {
+
+    followUp21Older.rateList7Day();
+
+})
+
+Then('User sees 30 day state rates based on A to Z order', () => {
+
+    followUp21Older.rateList30Day();
 
 })
