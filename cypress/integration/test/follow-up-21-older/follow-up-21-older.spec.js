@@ -1,8 +1,8 @@
 /// <reference types="Cypress" />
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
-import { followUp21Older } from "../../pages/d3-measures/follow-up-21-older"
-import { pillar1Measure } from "../../pages/pillar-1-measure"
+import { followUp21Older } from "../../pages/pillar-1/d3-measures/follow-up-21-older"
+import { pillar1Measure } from "../../pages/pillar-1/pillar-1-measure-common"
 
 beforeEach(() => {
     cy.medicaidLanding();

@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
-import { antipsychoticMedication } from "../../pages/pillar-1/d3-measures/2018-antipsychotic-measure-21"
+import { wellChild15 } from "../../pages/pillar-1/d3-measures/well-child-visits-15-months"
 import { pillar1Measure } from "../../pages/pillar-1/pillar-1-measure-common"
 
 beforeEach(() => {
@@ -10,13 +10,13 @@ beforeEach(() => {
 
 Given('User visits the measure page', () => {
 
-    cy.visit('/state-overviews/scorecard/long-term-nursing-home-residents-antipsychotic-medication/index.html');
+    cy.visit('/state-overviews/scorecard/well-child-visits-first-15-months-of-life/index.html');
 
 })
 
 When('User inspects the measure title', () => {
 
-    antipsychoticMedication.measureTitle();
+    wellChild15.measureTitle();
 
 })
 
@@ -28,7 +28,7 @@ Then('User sees VISIT THE PILLAR', () => {
 
 Then('User sees VISIT THE DOMAIN', () => {
 
-    antipsychoticMedication.visitTheDomain();
+    wellChild15.visitTheDomain();
 
 })
 
@@ -111,6 +111,12 @@ Then('User inspects color of Median line', () => {
 
 })
 
+Then('User inspects color of NR', () => {
+
+    pillar1Measure.colorOfNR();
+
+})
+
 Then('User inspects color of bars', () => {
 
     pillar1Measure.colorOfBars();
@@ -137,30 +143,42 @@ Then('User sees X axis bottom percentile', () => {
 
 When('User validates the median rate', () => {
 
-    antipsychoticMedication.medianRate();
+    wellChild15.medianRate();
 
 })
 
-Then('User sees 51 states and 2 Unions list', () => {
+Then('User sees 51 states list', () => {
 
-    antipsychoticMedication.stateAndUnionList();
+    pillar1Measure.stateListQuality();
 
 })
 
 Then('User sees state rates based on A to Z order', () => {
 
-    antipsychoticMedication.rateList();
+    wellChild15.rateList();
 
 })
 
-When('User inspects the Medicaid or Medicaid legend', () => {
+When('User inspects the Medicaid only population legend', () => {
 
-    pillar1Measure.colorOfMedicareOrMedicaid();
+    pillar1Measure.colorOfMedicaidOnly();
 
 })
 
-Then('User sees the Wyoming State Specific Comment', () => {
+When('User inspects the Chip only population legend', () => {
 
-    antipsychoticMedication.stateSpecificWY();
+    pillar1Measure.colorOfChipOnly();
+
+})
+
+When('User inspects the Medicaid and Chip population legend', () => {
+
+    pillar1Measure.colorOfMedicaidAndChip();
+
+})
+
+Then('User sees the West Virginia State Specific Comment', () => {
+
+    wellChild15.stateSpecificWV();
 
 })

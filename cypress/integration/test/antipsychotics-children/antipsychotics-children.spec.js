@@ -1,8 +1,8 @@
 /// <reference types="Cypress" />
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
-import { antipsychoticsChildren } from "../../pages/d3-measures/use-multiple-antipsychotics-children"
-import { pillar1Measure } from "../../pages/pillar-1-measure"
+import { antipsychoticsChildren } from "../../pages/pillar-1/d3-measures/use-multiple-antipsychotics-children"
+import { pillar1Measure } from "../../pages/pillar-1/pillar-1-measure-common"
 
 beforeEach(() => {
     cy.medicaidLanding();
