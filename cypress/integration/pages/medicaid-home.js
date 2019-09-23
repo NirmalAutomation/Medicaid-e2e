@@ -41,7 +41,9 @@ export class MedicaidHome {
             .then(() => {
                 cy.get('#submenu-7').invoke('show')
                     .contains('Scorecard')
-                    .click({ force: true });
+                    .click({
+                        force: true
+                    });
             })
     }
 
@@ -68,4 +70,56 @@ export class MedicaidHome {
             .and('contain', 'Nondiscrimination & Accessibility')
             .and('contain', 'Help with File Formats & Plug-ins');
     }
+
+    signUpText() {
+        cy.get('.usa-sign_up-block')
+            .should('contain', 'Sign up');
+    }
+
+    yourEmailAddress() {
+        cy.get('form')
+            .should('contain', 'Your email address');
+
+    }
+
+    enterEmailAddress() {
+        cy.get('#email')
+            .type('medicaid@gmail.com')
+            .should('have.value', 'medicaid@gmail.com');
+    }
+
+    signUpBtn() {
+        cy.get('form')
+            .should('contain', 'Sign up')
+    }
+
+    usaFooterLogo() {
+        cy.get('img').eq(3)
+            .should('have.attr', 'src', '/themes/custom/medicaid/images/footerlogo-MedicaidGov.png');
+    }
+
+    usaFooterLogoHeading() {
+        cy.get('.usa-footer-big-logo-heading')
+            .should('contain', 'Centers for Medicare & Medicaid Services');
+    }
+
+    twitterIcon() {
+        cy.xpath('//*[@id="site_footer"]/div[2]/div/div[2]/a[1]')
+            .should('have.attr', 'href', 'https://twitter.com/cmsgov');
+            
+    }
+
+    youtubeIcon() {
+        cy.xpath('//*[@id="site_footer"]/div[2]/div/div[2]/a[3]')
+        .should('have.attr', 'href', 'http://www.youtube.com/user/CMSHHSgov');
+    }
+
+    footerContactHeading() {
+        cy.get('.usa-footer-contact-heading')
+            .should('contain', 'A federal government managed website by the')
+            .and('contain', 'Centers for Medicare & Medicaid Services.')
+            .and('contain', '7500 Security Boulevard Baltimore, MD 21244');
+    }
 }
+
+export const medicaidHome = new MedicaidHome();

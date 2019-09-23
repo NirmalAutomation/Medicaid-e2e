@@ -2,7 +2,8 @@
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
 import { scorecardLanding } from "../../pages/scorecard-landing/scorecard-landing"
-import { pillar1Measure } from "../../pages/pillar-1/pillar-1-measure-common"
+import { breastCancer } from "../../pages/pillar-1/d3-measures/breast-cancer"
+import { adolescentWell } from "../../pages/pillar-1/d3-measures/adolescent-well-care"
 
 beforeEach(() => {
     cy.medicaidLanding();
@@ -32,11 +33,24 @@ When('User clicks on National Context icon', () => {
 
 })
 
+Then('User sees National Context page', () => {
+
+    cy.url().should('include', '/state-overviews/scorecard/national-context/index.html');
+
+})
+
 When('User clicks on System Health System Performance', () => {
 
     scorecardLanding.shspIcon();
 
 })
+
+Then('User sees System Health System Performance', () => {
+
+    cy.url().should('include', '/state-overviews/scorecard/state-health-system-performance/index.html');
+
+})
+
 
 When('User clicks on State Administrative Accountability', () => {
 
@@ -44,11 +58,25 @@ When('User clicks on State Administrative Accountability', () => {
 
 })
 
+Then('User sees State Administrative Accountability', () => {
+
+    cy.url().should('include', '/state-overviews/scorecard/state-administrative-accountability/index.html');
+
+})
+
+
 When('User clicks on Federal Administrative Accountability', () => {
 
     scorecardLanding.faaIcon();
 
 })
+
+Then('User sees Federal Administrative Accountability', () => {
+
+    cy.url().should('include', '/state-overviews/scorecard/federal-administrative-accountability/index.html');
+
+})
+
 
 When('User selects on National Context link text', () => {
 
@@ -86,17 +114,56 @@ Then('User sees What is Scorecard text', () => {
 
 })
 
-When('User selects a measure', () => {
+When('User selects a measure drop down', () => {
 
+    scorecardLanding.selectMeasureDropDown();
 
 })
 
 Then('User sees the pillar 1 measures', () => {
 
+    scorecardLanding.assertMeasureNames();
 
 })
 
 Then('User sees the pillar 2 and 3 sub categories', () => {
 
+    scorecardLanding.assertSubcategoryNames();
+    
+})
+
+When('User selects the Breast Cancer Screening measure', () => {
+
+    scorecardLanding.selectMeasureName();
+
+})
+
+Then('User visits the Breast Cancer Screening measure', () => {
+
+    cy.url().should('include', '/state-overviews/scorecard/breast-cancer-screening/index.html');
+
+})
+
+Then('User sees Breast Cancer Screening measure title', () => {
+
+    breastCancer.measureTitle();
+
+})
+
+When('User enters the Adolescent Well-Care Visits measure', () => {
+
+    scorecardLanding.typeMeasureName();
+
+})
+
+Then('User visits the Adolescent Well-Care Visits measure', () => {
+
+    cy.url().should('include', '/state-overviews/scorecard/adolescent-well-care-visits/index.html');
+    
+})
+
+Then('User sees measure title', () => {
+
+    adolescentWell.measureTitle();
 
 })
