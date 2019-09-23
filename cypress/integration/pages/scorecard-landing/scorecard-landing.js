@@ -92,3 +92,5 @@ export class ScorecardLanding {
     }
 
 }
+
+export const scorecardLanding = new ScorecardLanding();
