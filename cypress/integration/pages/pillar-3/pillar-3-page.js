@@ -2,8 +2,8 @@
 
 export class FederalAdministrative {
 
-    // Measure title
-    measureTitle() {
+    // Pillar title
+    pillarTitle() {
         cy.get('h1')
             .should('contain', 'Federal Administrative Accountability');
     }
@@ -21,9 +21,9 @@ export class FederalAdministrative {
         cy.get('tbody')
             .should('contain', 'State Plan Amendment and 1915 Waiver Processing')
             .and('contain', 'Section 1115 Demonstrations: Time from Submission to Approval')
-            .and('contain', 'Managed Care Capitation Rate Review: Total Days to Approve Rates')
+            .and('contain', 'Managed Care Capitation  Rate Review: Total Days to Approve Rates')
             .and('contain', 'Managed Care Capitation Rate Review: Days Under CMS Review')
-            .and('contain', 'Managed Care Contract Review');
+            .and('contain', 'Managed Care  Contract Review');
 
     }
 
@@ -33,27 +33,27 @@ export class FederalAdministrative {
         .click();
     }
 
-    selectFirstCategory() {
+    selectSecondCategory() {
         cy.get('tbody>tr').eq(1)
         .contains('Section 1115 Demonstrations: Time from Submission to Approval')
         .click();
     }
 
-    selectFirstCategory() {
+    selectThirdCategory() {
         cy.get('tbody>tr').eq(2)
-        .contains('Managed Care Capitation Rate Review: Total Days to Approve Rates')
+        .contains('Managed Care Capitation  Rate Review: Total Days to Approve Rates')
         .click();
     }
 
-    selectFirstCategory() {
+    selectFourthCategory() {
         cy.get('tbody>tr').eq(3)
         .contains('Managed Care Capitation Rate Review: Days Under CMS Review')
         .click();
     }
 
-    selectFirstCategory() {
+    selectFifthCategory() {
         cy.get('tbody>tr').eq(4)
-        .contains('Managed Care Contract Review')
+        .contains('Managed Care  Contract Review')
         .click();
     }
 

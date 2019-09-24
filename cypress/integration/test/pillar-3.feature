@@ -2,11 +2,12 @@ Feature: Federal Administrative Accountability
     Description: The purpose of this feature is to test components in the Federal Administrative Accounability page
 
     # User type is Website visitor
-    Scenario: Assert the text on pillar page
+    Scenario: Assert the text and sidebar on pillar page
         Given User visits the Federal Administrative Accountability page
         When User inspects the breadcrumbs
         When User inspects the pillar title
         Then User sees the associated sub categories
+        Then User sees right navigation bar
 
     Scenario: Verify the navigation to State Plan Amendment and 1915 Waiver Processing
         Given User visits the Federal Administrative Accountability page
