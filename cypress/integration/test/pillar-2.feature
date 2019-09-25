@@ -14,10 +14,10 @@ Feature: State Administrative Accountability
         When User selects the State Plan Amendment and 1915 Waiver Processing title
         Then User sees the State Plan Amendment and 1915 Waiver Processing page
 
-    Scenario: Verify the navigation to Annual 372(S) Reporting: Timeliness of Report Submissions
+    Scenario: Verify the navigation to Annual 372 Reporting: Timeliness of Report Submissions
         Given User visits the State Administrative Accountability page
-        When User selects the Annual 372(S) Reporting: Timeliness of Report Submissions title
-        Then User sees the Annual 372(S) Reporting: Timeliness of Report Submissions page
+        When User selects the Annual 372 Reporting: Timeliness of Report Submissions title
+        Then User sees the Annual 372 Reporting: Timeliness of Report Submissions page
 
     Scenario: Verify the navigation to Medicaid MAGI and CHIP Application Processing Times
         Given User visits the State Administrative Accountability page
@@ -49,7 +49,7 @@ Feature: State Administrative Accountability
         When User selects the Healthcare Fraud Prevention Partnership Participation title
         Then User sees the Healthcare Fraud Prevention Partnership Participation page
 
-    Scenario: Verify the navigation to Payment Error Rate  Measurement (PERM)
+    Scenario: Verify the navigation to Payment Error Rate  Measurement PERM
         Given User visits the State Administrative Accountability page
-        When User selects the Payment Error Rate  Measurement (PERM) title
-        Then User sees the Payment Error Rate  Measurement (PERM) page
+        When User selects the Payment Error Rate  Measurement PERM title
+        Then User sees the Payment Error Rate  Measurement PERM page

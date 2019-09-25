@@ -61,25 +61,25 @@ export class StateAdministrative {
     }
 
     selectSixthCategory() {
-        cy.get('tbody>tr').eq(4)
+        cy.get('tbody>tr').eq(5)
         .contains('T-MSIS Data Quality: Number of Open Top Priority Issues')
         .click();
     }
 
     selectSeventhCategory() {
-        cy.get('tbody>tr').eq(4)
+        cy.get('tbody>tr').eq(6)
         .contains('Initiation of Collaborative Investigations Between States and CMS’s Unified Program Integrity Contractors')
         .click();
     }
 
     selectEighthCategory() {
-        cy.get('tbody>tr').eq(4)
+        cy.get('tbody>tr').eq(7)
         .contains('Healthcare Fraud Prevention Partnership Participation')
         .click();
     }
 
     selectNinthCategory() {
-        cy.get('tbody>tr').eq(4)
+        cy.get('tbody>tr').eq(8)
         .contains('Payment Error Rate  Measurement (PERM)')
         .click();
     }
