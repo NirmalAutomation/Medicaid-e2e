@@ -29,19 +29,36 @@ Feature: Immunizations for Adolescents
         Then User inspects color of NR
         Then User inspects color of bars
 
-    Scenario: Verify the values on visualization
+    Scenario: Verify the values on visualization - HPV
         Given User visits the measure page
         Then User sees top line titles
         Then User sees X axis top percentile
         Then User sees X axis bottom percentile
-        When User validates the median rate
+        When User validates the HPV median rate
         Then User sees 51 states list
-        Then User sees state rates based on A to Z order
+        Then User sees HPV state rates based on A to Z order
         When User inspects the Medicaid only population legend
         When User inspects the Chip only population legend
         When User inspects the Medicaid and Chip population legend
 
-    Scenario: Verify the State Specific Comment for 4 states
+    Scenario: Verify the HPV State Specific Comment for 4 states
         Given User visits the measure page
-        Then User sees the West Virginia State Specific Comment
+        Then User sees the HPV West Virginia State Specific Comment
+
+    Scenario: Verify the values on visualization - Combination
+        Given User visits the measure page
+        Then User clicks on Combination 1 toggle button
+        Then User sees top line titles
+        Then User sees X axis top percentile
+        Then User sees X axis bottom percentile
+        When User validates the Combination median rate
+        Then User sees 51 states list
+        Then User sees Combination state rates based on A to Z order
+        When User inspects the Medicaid only population legend
+        When User inspects the Chip only population legend
+        When User inspects the Medicaid and Chip population legend
+
+    Scenario: Verify the Combination State Specific Comment for 4 states
+        Given User visits the measure page
+        Then User sees the Combination West Virginia State Specific Comment
 
