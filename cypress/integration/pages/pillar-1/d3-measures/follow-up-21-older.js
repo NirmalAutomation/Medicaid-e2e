@@ -18,7 +18,7 @@ export class FollowUp21Older {
     // Median Rate
     medianRate7Day() {
         cy.get('.median-text')
-            .should('contain', 'Median - 38%');
+            .should('contain', 'Median - 38.0%');
     }
 
     medianRate30Day() {

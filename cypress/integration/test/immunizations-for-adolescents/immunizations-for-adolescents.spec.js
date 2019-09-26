@@ -141,9 +141,21 @@ Then('User sees X axis bottom percentile', () => {
 
 })
 
-When('User validates the median rate', () => {
+When('User validates the HPV median rate', () => {
 
-    immunizationsAdolescents.medianRate();
+    immunizationsAdolescents.medianRateHPV();
+
+})
+
+When('User validates the Combination median rate', () => {
+
+    immunizationsAdolescents.medianRateCombination();
+
+})
+
+Then('User clicks on Combination 1 toggle button', () => {
+
+    immunizationsAdolescents.toggleCombination();
 
 })
 
@@ -153,9 +165,15 @@ Then('User sees 51 states list', () => {
 
 })
 
-Then('User sees state rates based on A to Z order', () => {
+Then('User sees HPV state rates based on A to Z order', () => {
 
-    immunizationsAdolescents.rateList();
+    immunizationsAdolescents.rateListHPV();
+
+})
+
+Then('User sees Combination state rates based on A to Z order', () => {
+
+    immunizationsAdolescents.rateListCombination();
 
 })
 
@@ -177,8 +195,14 @@ When('User inspects the Medicaid and Chip population legend', () => {
 
 })
 
-Then('User sees the West Virginia State Specific Comment', () => {
+Then('User sees the HPV West Virginia State Specific Comment', () => {
 
-    immunizationsAdolescents.stateSpecificWV();
+    immunizationsAdolescents.stateSpecificWVHPV();
+
+})
+
+Then('User sees the Combination West Virginia State Specific Comment', () => {
+
+    immunizationsAdolescents.stateSpecificWVHPV();
 
 })
