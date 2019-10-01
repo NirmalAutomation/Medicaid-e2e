@@ -1,12 +1,12 @@
 {
-    "baseUrl": "https://dev.medicaid.gov",
-    "viewportHeight": 700,
-    "viewportWidth": 1200,
-    "chromeWebSecurity": false,
-    "screenshotsFolder": "/e2e-robust/cypress/screenshots",
-    "ignoreTestFiles": "*.js",
-    "video": true,
-    "defaultCommandTimeout": 7000,
-    "execTimeout": 80000
-
+  "baseUrl": "https://dev.medicaid.gov",
+  "viewportHeight": 700,
+  "viewportWidth": 1200,
+  "chromeWebSecurity": false,
+  "screenshotsFolder": "/e2e-robust/cypress/screenshots",
+  "ignoreTestFiles": "*.js",
+  "video": true,
+  "defaultCommandTimeout": 7000,
+  "execTimeout": 80000,
+  "projectId": "fqiw32"
 }

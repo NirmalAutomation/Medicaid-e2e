@@ -23,6 +23,7 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+// cypress run --record --key 757c292b-7b70-4b8d-b3d5-aab51574bcbf
 
 Cypress.Commands.add('medicaidLanding', () => {
 
