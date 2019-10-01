@@ -11,7 +11,7 @@ Feature: National Context Sub category A
         Then User sees right navigation bar
 
     Scenario: Verify the How do States Deliver Care in Medicaid? page
-        Given User visits the How do States Deliver Care in Medicaid? page
+        Given User visits the How dzo States Deliver Care in Medicaid? page
         When User inspects the second sub breadcrumbs
         When User inspects the second Sub category title
         Then User sees VISIT THE PILLAR

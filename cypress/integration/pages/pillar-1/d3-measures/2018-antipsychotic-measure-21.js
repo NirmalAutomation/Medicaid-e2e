@@ -12,7 +12,7 @@ export class AntipsychoticMedication {
     visitTheDomain() {
         cy.get('.domainNav')
             .should('contain', 'VISIT THE DOMAIN: ')
-            .and('contain', 'Making Care Safer by Reducing Harm');
+            .and('contain', 'Make Care Safer by Reducing Harm');
     }
 
     // Median Rate

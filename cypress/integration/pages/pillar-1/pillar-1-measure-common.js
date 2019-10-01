@@ -10,8 +10,8 @@ export class Pillar1Measure {
 
     learnMore() {
 
-        cy.get('.expand_measure_description')
-            .should('contain', 'LEARN MORE ');
+        cy.get('.learn_more_container')
+            .should('contain', 'LEARN MORE');
     }
 
     populationTypes() {

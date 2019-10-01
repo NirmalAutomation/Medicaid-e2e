@@ -3,8 +3,8 @@
 export class NCExpenditureMeasure {
 
     visitThePillar() {
-        cy.get('.visit-section')
-            .should('contain', 'VISIT THE PILLAR:')
+        cy.get('.pillarNav')
+            .should('contain', 'VISIT THE PILLAR: ')
             .and('contain', 'National Context');
     }
 
@@ -27,7 +27,7 @@ export class NCExpenditureMeasure {
 
     }
 
-    firstSubBreadcrumbs() {
+    firstMeasureBreadcrumbs() {
         cy.get('.breadcrumb')
             .children('ol')
             .should('contain', 'Home')
@@ -37,7 +37,7 @@ export class NCExpenditureMeasure {
     }
 
     firstMeasureList() {
-        cy.get('tbody')
+        cy.get('h2')
             .should('contain', 'Annual Expenditures (Billions of $) by Payer')
             .and('contain', 'Annual Medicaid & CHIP Expenditures (Billions of $) by Service Category')
             .and('contain', 'Annual Medicaid & CHIP Expenditures by State or Territory');
@@ -49,7 +49,7 @@ export class NCExpenditureMeasure {
             .should('contain', 'How Much Do States Spend Per Medicaid Enrollee?');
     }
 
-    secondSubBreadcrumbs() {
+    secondMeasureBreadcrumbs() {
         cy.get('.breadcrumb')
             .children('ol')
             .should('contain', 'Home')
@@ -59,7 +59,7 @@ export class NCExpenditureMeasure {
     }
 
     secondMeasureList() {
-        cy.get('tbody')
+        cy.get('h2')
             .should('contain', 'Table 1. Per Capita Expenditure Estimates')
             .and('contain', 'Table 2. Assessing state T-MSIS data usability');
     }
@@ -71,7 +71,7 @@ export class NCExpenditureMeasure {
 
     }
 
-    thirdSubBreadcrumbs() {
+    thirdMeasureBreadcrumbs() {
         cy.get('.breadcrumb')
             .children('ol')
             .should('contain', 'Home')

@@ -26,7 +26,6 @@ Feature: Percentage of Eligibles Who Received Preventive Dental Services
         When User inspects style of Rate text
         When User inspects style of Median
         Then User inspects color of Median line
-        Then User inspects color of NR
         Then User inspects color of bars
 
     Scenario: Verify the values on visualization
