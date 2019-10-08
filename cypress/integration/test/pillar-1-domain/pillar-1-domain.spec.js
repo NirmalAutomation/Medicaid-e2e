@@ -34,6 +34,8 @@ Then('User sees VISIT THE PILLAR', () => {
 
 Then('User sees the first associated measures', () => {
 
+    cy.wait(2000);
+
     pillar1Domain.prenatalPostpartumCare();
 
     pillar1Domain.liveBirths();
@@ -84,6 +86,7 @@ Then('User sees right navigation bar', () => {
 Given('User visits the Promote Effective Communication & Coordination of Care page', () => {
 
     cy.visit('/state-overviews/scorecard/promote-effective-communication-coordination-care/index.html');
+    cy.wait(5000);
 
 })
 
@@ -195,9 +198,11 @@ Then('User sees the fifth associated measures', () => {
 
 })
 
-Given('User visits theMake Care Safer by Reducing Harm page', () => {
+Given('User visits the Make Care Safer by Reducing Harm page', () => {
 
     cy.visit('/state-overviews/scorecard/making-care-safer-reducing-harm/index.html');
+
+    cy.wait(2000);
 
 })
 

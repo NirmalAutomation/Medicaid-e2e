@@ -34,7 +34,6 @@ Feature: State Health System Performance domains
         When User inspects the fourth domain title
         Then User sees VISIT THE PILLAR
         Then User sees the fourth associated measures
-        Then User sees the fourth snack size visualization
         Then User sees right navigation bar
 
     Scenario: Verify the Make Care Affordable page
@@ -43,7 +42,6 @@ Feature: State Health System Performance domains
         When User inspects the fifth domain title
         Then User sees VISIT THE PILLAR
         Then User sees the fifth associated measures
-        Then User sees the fifth snack size visualization
         Then User sees right navigation bar
 
     Scenario: Verify the Make Care Safer by Reducing Harm page

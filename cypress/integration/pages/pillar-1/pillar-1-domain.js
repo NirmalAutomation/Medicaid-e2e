@@ -238,7 +238,6 @@ export class Pillar1Domain {
     followup6_20() {
         cy.get('tbody>tr')
             .should('contain', 'Follow-Up After Hospitalization for Mental Illness: Ages 6-20')
-            .and('contain', 'Promote Effective Communication & Coordination of Care');
     }
 
     followup6_20Snack() {
