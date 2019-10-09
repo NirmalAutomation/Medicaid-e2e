@@ -1,5 +1,7 @@
 /// <reference types="Cypress" />
 
+import { type } from "os";
+
 export class ScorecardLanding {
 
     breadcrumbs() {
@@ -69,20 +71,21 @@ export class ScorecardLanding {
             .should('contain', 'Find a Measure');
     }
 
-    typeMeasureName() {
-        cy.get('.chosen_container').click()
-            .then(() => {
-                cy.get('input[type=text]').type('Adolescent Well-Care Visits {enter}')
-            })
-    }
+    // typeMeasureName() {
+    //     cy.get('.select2-selection').click()
+    //         .then(() => {
+    //             cy.get('')
+    //                 .type('Adolescent Well-Care Visits {enter}');
+    //         })
+    // }
 
     selectMeasureDropDown() {
-        cy.get('.chosen-single').click();
+        cy.get('.select2-selection').click();
 
     }
 
     assertMeasureNames() {
-        cy.get('.chosen-results')
+        cy.get('.select2-results')
             .should('contain', 'Adolescent Well-Care Visits')
             .and('contain', 'Adult Emergency Department Visits')
             .and('contain', 'Ambulatory Care: Emergency Department Visits')
@@ -106,7 +109,7 @@ export class ScorecardLanding {
     }
 
     assertSubcategoryNames() {
-        cy.get('.chosen-results')
+        cy.get('.select2-results')
             .should('contain', 'State Plan Amendment and 1915 Waiver Processing')
             .and('contain', 'State Plan Amendment and 1915 Waiver Processing')
             .and('contain', 'Annual 372(S) Reporting: Timeliness of Report Submissions')
@@ -125,8 +128,8 @@ export class ScorecardLanding {
     }
 
     selectMeasureName() {
-        cy.get('.chosen-single').click().then(() => {
-            cy.get('.chosen-results')
+        cy.get('.select2-selection').click().then(() => {
+            cy.get('.select2-results')
                 .contains('Breast Cancer Screening')
                 .click();
 

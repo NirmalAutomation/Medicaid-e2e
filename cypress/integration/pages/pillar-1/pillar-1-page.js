@@ -23,16 +23,16 @@ export class SystemHealthSystemPillar {
             .should('contain', 'Visit a Domain');
     }
 
-    typeDomainName() {
-        cy.get('.chosen_container').click()
-            .then(() => {
-                cy.get('input[type=text]').type('Promote Effective Prevention & Treatment of Chronic Diseases {enter}')
-            })
-    }
+    // typeDomainName() {
+    //     cy.get('.chosen_container').click()
+    //         .then(() => {
+    //             cy.get('input[type=text]').type('Promote Effective Prevention & Treatment of Chronic Diseases {enter}')
+    //         })
+    // }
 
     selectDomainName() {
-        cy.get('.chosen-single').click().then(() => {
-            cy.get('.chosen-results')
+        cy.get('.select2-selection').click().then(() => {
+            cy.get('.select2-results')
                 .contains('Make Care Affordable')
                 .click();
 
@@ -40,12 +40,12 @@ export class SystemHealthSystemPillar {
     }
 
     selectDomainDropDown() {
-        cy.get('.chosen-single').click();
+        cy.get('.select2-selection').click();
 
     }
 
     assertDomainNames() {
-        cy.get('.chosen-results')
+        cy.get('.select2-results')
             .should('contain', 'Promote Effective Prevention & Treatment of Chronic Diseases')
             .and('contain', 'Promote Effective Communication & Coordination of Care')
             .and('contain', 'Work with Communities to Promote Best Practices of Healthy Living')

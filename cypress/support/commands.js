@@ -120,3 +120,15 @@ Cypress.Commands.add('pillar3PageNavigation', () => {
         })
 
 })
+
+/*
+node { "master" }{
+    
+    git 'https://github.com/NirmalAutomation/e2e-robust.git'
+    
+    set label: "Install NPM package", script: "npm install"
+    
+    set label: "Run test", script: "npx cypress run"
+    
+}
+*/
