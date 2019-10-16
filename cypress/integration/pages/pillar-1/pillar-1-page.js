@@ -23,12 +23,11 @@ export class SystemHealthSystemPillar {
             .should('contain', 'Visit a Domain');
     }
 
-    // typeDomainName() {
-    //     cy.get('.chosen_container').click()
-    //         .then(() => {
-    //             cy.get('input[type=text]').type('Promote Effective Prevention & Treatment of Chronic Diseases {enter}')
-    //         })
-    // }
+    typeDomainName() {
+        cy.get('input[type=search]').eq(2)
+            .invoke('show')
+            .type('Promote Effective Prevention & Treatment of Chronic Diseases{enter}');
+    }
 
     selectDomainName() {
         cy.get('.select2-selection').click().then(() => {

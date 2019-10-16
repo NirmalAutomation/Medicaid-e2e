@@ -58,7 +58,7 @@ Feature: Immunizations for Adolescents
         When User inspects the Chip only population legend
         When User inspects the Medicaid and Chip population legend
 
-    Scenario: Verify the Combination State Specific Comment for 4 states
+    Scenario: Verify the Combination State Specific Comment
         Given User visits the measure page
         Then User sees the Combination West Virginia State Specific Comment
 

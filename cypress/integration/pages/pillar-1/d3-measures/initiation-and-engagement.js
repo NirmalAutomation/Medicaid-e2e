@@ -77,15 +77,7 @@ export class InitiationEngagement {
             .and('contain', 'NR');
     }
 
-    // State Specific Comments
-    stateSpecificWV() {
-        cy.get('.bar').eq(0).trigger('mouseover')
-            .then(() => {
-
-                cy.get('.tooltip-text')
-                    .should('contain', "WV: Rates include FFS and managed care populations (4 MCOs). Numerators only include events on separate dates of service because the state is unable to determine if visits on the same day are with different providers, as required by the specifications. The chemical dependency benefit is excluded from the denominator criteria. Rates include paid claims only.")
-            })
-    }
+    
 }
 
 export const initiationEngagement = new InitiationEngagement();

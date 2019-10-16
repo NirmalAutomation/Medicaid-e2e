@@ -41,12 +41,9 @@ Feature: Follow-Up After Hospitalization for Mental Illness: Ages 6-20
         When User inspects the Chip only population legend
         When User inspects the Medicaid and Chip population legend
 
-    Scenario: Verify the State Specific Comment for 4 states - 7 day follow up
+    Scenario: Verify the State Specific Comment - 7 day follow up
         Given User visits the measure page
         Then User sees the 7 day Wyoming State Specific Comment
-        # Then User sees the 7 day Washington State Specific Comment
-        # Then User sees the 7 day Alabama State Specific Comment
-        # Then User sees the 7 day Connecticut State Specific Comment
 
     Scenario: Verify the values on visualization - 30 day follow up
         Given User visits the measure page
@@ -61,10 +58,7 @@ Feature: Follow-Up After Hospitalization for Mental Illness: Ages 6-20
         When User inspects the Chip only population legend
         When User inspects the Medicaid and Chip population legend
 
-    Scenario: Verify the State Specific Comment for 4 states - 30 day follow up
+    Scenario: Verify the State Specific Comment - 30 day follow up
         Given User visits the measure page
         Then User clicks on 30 day follow up toggle button
         Then User sees the 30 day Wyoming State Specific Comment
-        # Then User sees the 30 day Washington State Specific Comment
-        # Then User sees the 30 day Alabama State Specific Comment
-        # Then User sees the 30 day Connecticut State Specific Comment

@@ -41,7 +41,7 @@ Feature: Well-Child Visits in the First 15 Months of Life
         When User inspects the Chip only population legend
         When User inspects the Medicaid and Chip population legend
 
-    Scenario: Verify the State Specific Comment for 4 states
+    Scenario: Verify the State Specific Comment
         Given User visits the measure page
         Then User sees the West Virginia State Specific Comment
 

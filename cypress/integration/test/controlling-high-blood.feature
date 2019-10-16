@@ -42,7 +42,7 @@ Feature: Controlling High Blood Pressure
         When User inspects the Medicaid CHIP and Dual population legend
         When User inspects the Medicaid and Chip population legend
 
-    Scenario: Verify the State Specific Comment for 4 states
+    Scenario: Verify the State Specific Comment
         Given User visits the measure page
         Then User sees the West Virginia State Specific Comment
 

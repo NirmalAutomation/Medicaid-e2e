@@ -38,7 +38,7 @@ Feature: Percentage of Eligibles Who Received Preventive Dental Services
         Then User sees state rates based on A to Z order
         When User inspects the Medicaid only population legend
 
-    Scenario: Verify the State Specific Comment for 4 states
+    Scenario: Verify the State Specific Comment
         Given User visits the measure page
         Then User sees the West Virginia State Specific Comment
 

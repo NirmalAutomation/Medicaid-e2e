@@ -123,7 +123,6 @@ Then('User sees the table grids', () => {
 
 Then('User sees the snack size visualization', () => {
 
-    cy.wait(5000);
     systemHealthSystemPillar.antipsychoticsChildrenAdolescentsSnack();
     systemHealthSystemPillar.followup6_20Snack();
     systemHealthSystemPillar.followup21_olderSnack();
@@ -139,5 +138,6 @@ Then('User sees the snack size visualization', () => {
     systemHealthSystemPillar.comprehensiveDiabetesCareSnack();
     systemHealthSystemPillar.controllingHighBloodSnack();
     systemHealthSystemPillar.breastCancerSnack();
+    
 })
 

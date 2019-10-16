@@ -48,6 +48,7 @@ Feature: Scorecard Landing
     Scenario: Navigate to measure page by entering name
         Given User visits the Scorecard landing
         Then User sees Find a Measure section
+        When User selects a measure drop down
         When User enters the Adolescent Well-Care Visits measure
         Then User visits the Adolescent Well-Care Visits measure
         Then User sees measure title

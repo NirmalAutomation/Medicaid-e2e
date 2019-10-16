@@ -24,6 +24,7 @@ Feature: State Health System Performance
     Scenario: Navigate to domain page by entering name
         Given User visits the State Health System Performance page
         Then User sees Visit a Domain section
+        When User selects a domain drop down
         When User enters the Promote Effective Prevention Treatment of Chronic Diseases domain
         Then User visits the Promote Effective Prevention Treatment of Chronic Diseases domain
         Then User sees Promote Effective Prevention Treatment of Chronic Diseases title
@@ -31,4 +32,4 @@ Feature: State Health System Performance
     Scenario: Verify the List of measures and domains on pillar 1 page
         Given User visits the State Health System Performance page
         Then User sees the table grids
-        Then User sees the snack size visualization 
+        Then User sees the snack size visualization

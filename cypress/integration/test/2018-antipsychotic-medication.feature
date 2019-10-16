@@ -38,7 +38,7 @@ Feature: Percentage of Long-stay Nursing Home Residents who got an Antipsychotic
         Then User sees state rates based on A to Z order
         When User inspects the Medicaid or Medicaid legend
 
-    Scenario: Verify the State Specific Comment for 4 states
+    Scenario: Verify the State Specific Comment 
         Given User visits the measure page
         Then User sees the Wyoming State Specific Comment
        

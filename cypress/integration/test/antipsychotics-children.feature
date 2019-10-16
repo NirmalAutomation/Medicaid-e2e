@@ -40,7 +40,7 @@ Feature: Use of Multiple Concurrent Antipsychotics in Children & Adolescents
         When User inspects the Medicaid only population legend
         When User inspects the Medicaid and Chip population legend
 
-    Scenario: Verify the State Specific Comment for 4 states
+    Scenario: Verify the State Specific Comment
         Given User visits the measure page
         Then User sees the Wyoming State Specific Comment
         Then User sees the Washington State Specific Comment

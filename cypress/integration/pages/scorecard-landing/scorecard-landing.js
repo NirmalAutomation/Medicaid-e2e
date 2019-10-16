@@ -71,17 +71,13 @@ export class ScorecardLanding {
             .should('contain', 'Find a Measure');
     }
 
-    // typeMeasureName() {
-    //     cy.get('.select2-selection').click()
-    //         .then(() => {
-    //             cy.get('')
-    //                 .type('Adolescent Well-Care Visits {enter}');
-    //         })
-    // }
+    typeMeasureName() {
+        cy.get('input[type=search]').eq(2).invoke('show')
+            .type('Adolescent Well-Care Visits{enter}');
+    }
 
     selectMeasureDropDown() {
         cy.get('.select2-selection').click();
-
     }
 
     assertMeasureNames() {
