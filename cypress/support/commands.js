@@ -42,7 +42,7 @@ Cypress.Commands.add('scorecardPageNavigation', () => {
     cy.get('#block-mainmenu-2')
         .contains('State Overviews').trigger('mousemove')
         .then(() => {
-            cy.get('#submenu-7').invoke('show')
+            cy.get('#submenu-8').invoke('show')
                 .contains('Scorecard')
                 .click({ force: true });
         })
@@ -60,7 +60,7 @@ Cypress.Commands.add('ncPageNavigation', () => {
     cy.get('#block-mainmenu-2')
         .contains('State Overviews').trigger('mousemove')
         .then(() => {
-            cy.get('#submenu-7').invoke('show')
+            cy.get('#submenu-8').invoke('show')
                 .contains('National Context')
                 .click({ force: true });
         })
@@ -78,7 +78,7 @@ Cypress.Commands.add('pillar1PageNavigation', () => {
     cy.get('#block-mainmenu-2')
         .contains('State Overviews').trigger('mousemove')
         .then(() => {
-            cy.get('#submenu-7').invoke('show')
+            cy.get('#submenu-8').invoke('show')
                 .contains('State Health System Performance')
                 .click({ force: true });
         })
@@ -96,7 +96,7 @@ Cypress.Commands.add('pillar2PageNavigation', () => {
     cy.get('#block-mainmenu-2')
         .contains('State Overviews').trigger('mousemove')
         .then(() => {
-            cy.get('#submenu-7').invoke('show')
+            cy.get('#submenu-8').invoke('show')
                 .contains('State Administrative Accountability')
                 .click({ force: true });
         })

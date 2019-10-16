@@ -39,7 +39,7 @@ export class MedicaidHome {
         cy.get('#block-mainmenu-2')
             .contains('State Overviews').trigger('mousemove')
             .then(() => {
-                cy.get('#submenu-7').invoke('show')
+                cy.get('#submenu-8').invoke('show')
                     .contains('Scorecard')
                     .click({
                         force: true
