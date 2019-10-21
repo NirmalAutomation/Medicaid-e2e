@@ -22,3 +22,9 @@ node('master') {
     }
 }
 -----------------------------------------------------------------------------------------
+
+mocha report all-in-one
+
+npx mochawesome-merge --reportDir cypress/reports/mocha > mochareports/report.json
+npx marge mochareports/report.json -f report -o mochareports
+-----------------------------------------------------------------------------------------
