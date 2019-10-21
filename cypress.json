@@ -8,5 +8,10 @@
   "video": true,
   "defaultCommandTimeout": 7000,
   "execTimeout": 80000,
-  "projectId": "fqiw32"
+  "projectId": "fqiw32",
+  
+    "reporter": "junit",
+    "reporterOptions": {
+      "mochaFile": "test-results/test-output-[hash].xml"
+    }  
 }

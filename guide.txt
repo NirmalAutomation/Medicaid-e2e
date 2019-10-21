@@ -1,0 +1,18 @@
+Initial installation command of jenkins - 
+java -jar jenkins.war -httpPort=8080
+
+Jenkins Pipeline setup
+node('master') {
+    
+    stage('Git Checkout') {
+        git 'https://github.com/NirmalAutomation/e2e-robust'
+    }
+    
+    stage('NPM Package Restore') {
+        bat label: 'Install NPM Package', script: 'npm install'
+    }
+    
+    stage('Run Cypress Test') {
+        bat label: 'Run test', script: 'npx cypress run --browser chrome'
+    }
+}

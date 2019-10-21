@@ -1,4 +1,0 @@
-Initial installation command of jenkins - 
-java -jar jenkins.war -httpPort=8080
-
-
