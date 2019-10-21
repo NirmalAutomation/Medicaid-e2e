@@ -10,8 +10,8 @@
   "execTimeout": 80000,
   "projectId": "fqiw32",
   
-    "reporter": "junit",
+    "reporter": "cypress-multi-reporters",
     "reporterOptions": {
-      "mochaFile": "test-results/test-output-[hash].xml"
+      "configFile": "reporterOptions.json"
     }  
 }

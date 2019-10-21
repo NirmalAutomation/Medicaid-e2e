@@ -1,5 +1,10 @@
+Cypress Dashboard
+cypress run --browser chrome --record --key 757c292b-7b70-4b8d-b3d5-aab51574bcbf
+----------------------------------------------------------------------------------------
+
 Initial installation command of jenkins - 
 java -jar jenkins.war -httpPort=8080
+----------------------------------------------------------------------------------------
 
 Jenkins Pipeline setup
 node('master') {
@@ -16,3 +21,4 @@ node('master') {
         bat label: 'Run test', script: 'npx cypress run --browser chrome'
     }
 }
+-----------------------------------------------------------------------------------------
