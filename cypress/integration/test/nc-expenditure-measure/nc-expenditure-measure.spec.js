@@ -1,8 +1,8 @@
 /// <reference types="Cypress" />
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
-import { ncExpenditureMeasure } from "../../pages/national-context/nc-expenditure-measure"
-import { rightNavBlock } from "../../pages/right-nav-block";
+import { ncExpenditureMeasure } from "../../pages/scorecard/national-context/nc-expenditure-measure"
+import { rightNavBlock } from "../../pages/scorecard/right-nav-block";
 
 beforeEach(() => {
     cy.medicaidLanding();

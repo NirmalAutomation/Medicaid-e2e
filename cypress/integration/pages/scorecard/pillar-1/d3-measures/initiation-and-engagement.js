@@ -21,6 +21,12 @@ export class InitiationEngagement {
             .should('contain', 'Median - 40.0%');
     }
 
+    // Total AOD Abuse or Dependence
+    totalHeading() {
+        cy.get('h2').eq(0)
+            .should('contain', 'Total AOD Abuse or Dependence');
+    }
+
     // Total Rate List
     totalInitiationrateList() {
         cy.get('.chart-axisRight')
@@ -77,7 +83,7 @@ export class InitiationEngagement {
             .and('contain', 'NR');
     }
 
-    
+
 }
 
 export const initiationEngagement = new InitiationEngagement();

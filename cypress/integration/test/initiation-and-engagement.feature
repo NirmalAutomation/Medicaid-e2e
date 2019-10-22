@@ -11,4 +11,5 @@ Feature: Initiation & Engagement of Alcohol & Other Drug Dependence Treatment
         Then User sees the legend icons
         Then User sees the population types
 
-    
+    Scenario: Verify the Total AOD Abuse or Dependence
+        Given User visits the measure page

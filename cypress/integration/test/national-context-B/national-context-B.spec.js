@@ -1,8 +1,8 @@
 /// <reference types="Cypress" />
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
-import { nationalContextB } from "../../pages/national-context/nc-subcategory-b"
-import { rightNavBlock } from "../../pages/right-nav-block";
+import { nationalContextB } from "../../pages/scorecard/national-context/nc-subcategory-b"
+import { rightNavBlock } from "../../pages/scorecard/right-nav-block";
 
 beforeEach(() => {
     cy.medicaidLanding();

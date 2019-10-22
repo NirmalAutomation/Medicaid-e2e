@@ -1,9 +1,9 @@
 /// <reference types="Cypress" />
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
-import { scorecardLanding } from "../../pages/scorecard-landing/scorecard-landing"
-import { breastCancer } from "../../pages/pillar-1/d3-measures/breast-cancer"
-import { adolescentWell } from "../../pages/pillar-1/d3-measures/adolescent-well-care"
+import { scorecardLanding } from "../../pages/scorecard/scorecard-landing/scorecard-landing"
+import { breastCancer } from "../../pages/scorecard/pillar-1/d3-measures/breast-cancer"
+import { adolescentWell } from "../../pages/scorecard/pillar-1/d3-measures/adolescent-well-care"
 
 beforeEach(() => {
     cy.medicaidLanding();

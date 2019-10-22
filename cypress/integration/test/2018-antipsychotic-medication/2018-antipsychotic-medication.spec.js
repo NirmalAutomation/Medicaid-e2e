@@ -1,8 +1,8 @@
 /// <reference types="Cypress" />
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
-import { antipsychoticMedication } from "../../pages/pillar-1/d3-measures/2018-antipsychotic-measure-21"
-import { pillar1Measure } from "../../pages/pillar-1/pillar-1-measure-common"
+import { antipsychoticMedication } from "../../pages/scorecard/pillar-1/d3-measures/2018-antipsychotic-measure-21"
+import { pillar1Measure } from "../../pages/scorecard/pillar-1/pillar-1-measure-common"
 
 beforeEach(() => {
     cy.medicaidLanding();

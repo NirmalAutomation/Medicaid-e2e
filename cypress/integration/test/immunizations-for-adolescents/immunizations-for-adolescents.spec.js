@@ -1,8 +1,8 @@
 /// <reference types="Cypress" />
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
-import { immunizationsAdolescents } from "../../pages/pillar-1/d3-measures/immunizations-for-adolescents"
-import { pillar1Measure } from "../../pages/pillar-1/pillar-1-measure-common"
+import { immunizationsAdolescents } from "../../pages/scorecard/pillar-1/d3-measures/immunizations-for-adolescents"
+import { pillar1Measure } from "../../pages/scorecard/pillar-1/pillar-1-measure-common"
 
 beforeEach(() => {
     cy.medicaidLanding();

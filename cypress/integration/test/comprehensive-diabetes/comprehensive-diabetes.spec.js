@@ -1,8 +1,8 @@
 /// <reference types="Cypress" />
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
-import { comprehensiveDiabetes } from "../../pages/pillar-1/d3-measures/comprehensive-diabetes"
-import { pillar1Measure } from "../../pages/pillar-1/pillar-1-measure-common"
+import { comprehensiveDiabetes } from "../../pages/scorecard/pillar-1/d3-measures/comprehensive-diabetes"
+import { pillar1Measure } from "../../pages/scorecard/pillar-1/pillar-1-measure-common"
 
 beforeEach(() => {
     cy.medicaidLanding();
