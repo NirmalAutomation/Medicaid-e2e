@@ -68,7 +68,6 @@ Then('User sees the second measure lists', () => {
 
 })
 
-
 Given('User visits the Long Term Services and Supports Expenditures on Home Community Based Services page', () => {
 
     cy.visit('/state-overviews/scorecard/ltss-expenditures-on-hcbs/index.html');

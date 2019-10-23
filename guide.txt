@@ -28,3 +28,36 @@ mocha report all-in-one
 npx mochawesome-merge --reportDir cypress/reports/mocha > mochareports/report.json
 npx marge mochareports/report.json -f report -o mochareports
 -----------------------------------------------------------------------------------------
+
+reports
+
+cypress.json
+"reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+      "configFile": "reporterOptions.json"
+    } 
+
+
+reporterOptions.json
+{
+    "reporterEnabled": "mochawesome, mocha-junit-reporter, junit",
+    "mochaJunitReporterOptions": {
+        "mochaFile": "cypress/reports/junit/test_results[hash].xml",
+        "toConsole": false
+    },
+
+    "mochawesomeReporterOptions": {
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+    }
+}
+
+jnuit reporter
+ "reporter": "junit",
+    "reporterOptions": {
+      "mochaFile": "results/cypress-report.xml",
+      "toConsole": true
+    }
