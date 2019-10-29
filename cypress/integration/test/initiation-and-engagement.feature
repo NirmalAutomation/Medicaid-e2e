@@ -13,3 +13,5 @@ Feature: Initiation & Engagement of Alcohol & Other Drug Dependence Treatment
 
     Scenario: Verify the Total AOD Abuse or Dependence
         Given User visits the measure page
+        When User inspects the Visualization title
+        Then User sees 
