@@ -27,7 +27,14 @@
 
 Cypress.Commands.add('medicaidLanding', () => {
 
-    cy.visit('/?ACA=JMwCeGV1O8');
+    // Dev
+    // cy.visit('/?ACA=JMwCeGV1O8');
+
+    // Test
+    // cy.visit('');
+
+    // Imp
+    //cy.visit('/?ACA=MBtjpurjZFO');
 
 })
 
@@ -37,7 +44,11 @@ Cypress.Commands.add('scorecardPageNavigation', () => {
         return false
     })
 
-    cy.visit('/?ACA=JMwCeGV1O8');
+    // Dev
+    // cy.visit('/?ACA=JMwCeGV1O8');
+
+    // Imp
+    cy.visit('/?ACA=MBtjpurjZFO');
 
     cy.get('#block-mainmenu-2')
         .contains('State Overviews').trigger('mousemove')

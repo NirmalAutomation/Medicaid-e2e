@@ -1,7 +1,5 @@
 /// <reference types="Cypress" />
 
-import { type } from "os";
-
 export class ScorecardLanding {
 
     breadcrumbs() {
