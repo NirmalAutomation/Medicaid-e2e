@@ -319,7 +319,7 @@ export class SystemHealthSystemPillar {
 
     stateCareSurveysBene() {
         cy.get('tbody>tr')
-            .should('contain', 'State Use Experience of Care Surveys for Beneficiaries Using Long-Term Services and Supports')
+            .should('contain', 'State Use of Experience of Care Surveys for Beneficiaries Using Long-Term Services and Supports')
             .and('contain', 'Strengthen Person & Family Engagement as Partners in their Care');
     }
 

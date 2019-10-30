@@ -21,7 +21,6 @@ export class Pillar1Domain {
     firstDomainTitle() {
         cy.get('h1')
             .should('contain', 'Promote Effective Prevention & Treatment of Chronic Diseases');
-
     }
 
     // Table
@@ -342,7 +341,7 @@ export class Pillar1Domain {
     // Table
     stateCareSurveysBene() {
         cy.get('tbody>tr')
-            .should('contain', 'State Use Experience of Care Surveys for Beneficiaries Using Long-Term Services and Supports');
+            .should('contain', 'State Use of Experience of Care Surveys for Beneficiaries Using Long-Term Services and Supports');
     }
 
     // Make Care Safer by Reducing Harm
