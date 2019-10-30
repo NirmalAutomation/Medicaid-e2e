@@ -15,20 +15,27 @@ export class InitiationEngagement {
             .and('contain', 'Promote Effective Prevention & Treatment of Chronic Diseases');
     }
 
-    // Median Rate
-    totalInitiationMedianRate() {
-        cy.get('.median-text')
-            .should('contain', 'Median - 40.0%');
+    // Total AOD Abuse or Dependence
+    totalAODTitle() {
+        cy.get('h2')
+            .should('contain', 'Total AOD Abuse or Dependence');
+
     }
 
-    // Total AOD Abuse or Dependence
-    totalHeading() {
-        cy.get('h2').eq(0)
-            .should('contain', 'Total AOD Abuse or Dependence');
+    totalAODMedianRateInitiation() {
+        cy.get('.median-text')
+            .should('contain', 'Median - 40.0%');
+
+    }
+
+    totalAODMedianRateEngagement() {
+        cy.get('.median-text')
+            .should('contain', 'Median - 14.5%');
+
     }
 
     // Total Rate List
-    totalInitiationrateList() {
+    totalAODInitiationrateList() {
         cy.get('.chart-axisRight')
             .should('contain', 'NR')
             .and('contain', '38.8%')
@@ -83,24 +90,7 @@ export class InitiationEngagement {
             .and('contain', 'NR');
     }
 
-    totalAODTitle() {
-        cy.get('h2')
-            .should('contain', 'Total AOD Abuse or Dependence');
-
-    }
-
-    totalAODMedianRateInitiation() {
-        cy.get('.median-text')
-            .should('contain', 'Median - 40.0%');
-
-    }
-
-    totalAODMedianRateEngagement() {
-        cy.get('.median-text')
-            .should('contain', 'Median - 14.5%');
-
-    }
-
+    // Alcohol Abuse or Dependence
     alcoholAbuseTitle() {
         cy.get('h2')
             .should('contain', 'Alcohol Abuse or Dependence');
@@ -119,6 +109,7 @@ export class InitiationEngagement {
 
     }
 
+    // Opioid Abuse or Dependence
     opioidAbuseTitle() {
         cy.get('h2')
             .should('contain', 'Opioid Abuse or Dependence');
@@ -137,6 +128,7 @@ export class InitiationEngagement {
 
     }
 
+    // Other Drug Abuse or Dependence
     otherDrugTitle() {
         cy.get('h2')
             .should('contain', 'Other Drug Abuse or Dependence');

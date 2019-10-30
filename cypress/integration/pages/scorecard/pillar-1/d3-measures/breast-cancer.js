@@ -15,6 +15,12 @@ export class BreastCancer {
             .and('contain', 'Promote Effective Prevention & Treatment of Chronic Diseases');
     }
 
+    // Viz Title
+    vizTitle() {
+        cy.get('h2')
+            .should('contain', 'Breast Cancer Screening');
+    }
+
     // Median Rate
     medianRate() {
         cy.get('.median-text')

@@ -15,6 +15,12 @@ export class FollowUp6To20 {
             .and('contain', 'Promote Effective Communication & Coordination of Care');
     }
 
+    // Viz Title
+    vizTitle() {
+        cy.get('h2')
+            .should('contain', 'Follow-Up After Hospitalization for Mental Illness: Ages 6-20');
+    }
+
     // Median Rate
     medianRate7Day() {
         cy.get('.median-text')

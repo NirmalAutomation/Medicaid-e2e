@@ -2,6 +2,27 @@ Feature: Scorecard Landing
     Description: The purpose of this feature is to test components in the Scorecard landing page
 
     # User type is Website visitor
+    Scenario: Verify the header elements
+        Given User visits the Scorecard landing
+        Then User sees Medicaid gov logo
+        Then User sees secondary header navigation
+        When User inspects search feature
+        Then User sees mega menu block
+
+    Scenario: Verify the footer elments
+        Given User visits the Scorecard landing
+        Then User sees Related Sites
+        Then User sees Helpful Links
+        When User inspects Sign Up block
+        Then User enter email address
+
+    Scenario: Verify the secondary footer elements
+        Given User visits the Scorecard landing
+        Then User sees footer logo
+        Then User sees footer logo header
+        Then User sees Twitter and Youtube logos
+        Then User sees footer contact heading
+
     Scenario: Assert text and logo on Scorecard landing page
         Given User visits the Scorecard landing
         When User inspects the breadcrumbs

@@ -15,6 +15,12 @@ export class AntipsychoticMedication {
             .and('contain', 'Make Care Safer by Reducing Harm');
     }
 
+    // Viz Title
+    vizTitle() {
+        cy.get('h2')
+            .should('contain', 'Use of Multiple Concurrent Antipsychotics in Children & Adolescents');
+    }
+
     // Median Rate
     medianRate() {
         cy.get('.median-text')

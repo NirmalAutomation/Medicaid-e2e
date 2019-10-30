@@ -15,6 +15,81 @@ Given('User visits the Scorecard landing', () => {
 
 })
 
+Then('User sees Medicaid gov logo', () => {
+
+    scorecardLanding.medicaidLogo();
+
+})
+
+Then('User sees secondary header navigation', () => {
+
+    scorecardLanding.headerNavSecondary();
+
+})
+
+When('User inspects search feature', () => {
+
+    scorecardLanding.searchContainer();
+
+})
+
+Then('User sees mega menu block', () => {
+
+    scorecardLanding.mainMenuList();
+
+})
+
+Then('User sees Related Sites', () => {
+
+    scorecardLanding.relatedSitesLinks();
+
+})
+
+Then('User sees Helpful Links', () => {
+
+    scorecardLanding.helpfulLinks();
+
+})
+
+When('User inspects Sign Up block', () => {
+
+    scorecardLanding.signUpText();
+    scorecardLanding.yourEmailAddress();
+    scorecardLanding.signUpBtn();
+
+})
+
+Then('User enter email address', () => {
+
+    scorecardLanding.enterEmailAddress();
+
+})
+
+Then('User sees footer logo', () => {
+
+    scorecardLanding.usaFooterLogo();
+
+})
+
+Then('User sees footer logo header', () => {
+
+    scorecardLanding.usaFooterLogoHeading();
+
+})
+
+Then('User sees Twitter and Youtube logos', () => {
+
+    scorecardLanding.twitterIcon();
+    scorecardLanding.youtubeIcon();
+
+})
+
+Then('User sees footer contact heading', () => {
+
+    scorecardLanding.footerContactHeading();
+
+})
+
 When('User inspects the breadcrumbs', () => {
 
     scorecardLanding.breadcrumbs();
@@ -129,7 +204,7 @@ Then('User sees the pillar 1 measures', () => {
 Then('User sees the pillar 2 and 3 sub categories', () => {
 
     scorecardLanding.assertSubcategoryNames();
-    
+
 })
 
 When('User selects the Breast Cancer Screening measure', () => {
@@ -159,7 +234,7 @@ When('User enters the Adolescent Well-Care Visits measure', () => {
 Then('User visits the Adolescent Well-Care Visits measure', () => {
 
     cy.url().should('include', '/state-overviews/scorecard/adolescent-well-care-visits/index.html');
-    
+
 })
 
 Then('User sees measure title', () => {

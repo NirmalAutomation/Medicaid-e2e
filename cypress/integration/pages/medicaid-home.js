@@ -25,7 +25,7 @@ export class MedicaidHome {
     }
 
     mainMenuList() {
-        cy.get('#block-mainmenu-2')
+        cy.get('#ubermenu-main-2-primary')
             .should('contain', 'Federal Policy Guidance')
             .and('contain', 'Medicaid')
             .and('contain', 'Resources for States')
@@ -36,10 +36,10 @@ export class MedicaidHome {
     }
 
     clickScorecardLink() {
-        cy.get('#block-mainmenu-2')
+        cy.get('#ubermenu-main-2-primary')
             .contains('State Overviews').trigger('mousemove')
             .then(() => {
-                cy.get('#submenu-8').invoke('show')
+                cy.get('#submenu3').invoke('show')
                     .contains('Scorecard')
                     .click({
                         force: true
@@ -106,12 +106,12 @@ export class MedicaidHome {
     twitterIcon() {
         cy.xpath('//*[@id="site_footer"]/div[2]/div/div[2]/a[1]')
             .should('have.attr', 'href', 'https://twitter.com/cmsgov');
-            
+
     }
 
     youtubeIcon() {
         cy.xpath('//*[@id="site_footer"]/div[2]/div/div[2]/a[3]')
-        .should('have.attr', 'href', 'http://www.youtube.com/user/CMSHHSgov');
+            .should('have.attr', 'href', 'http://www.youtube.com/user/CMSHHSgov');
     }
 
     footerContactHeading() {

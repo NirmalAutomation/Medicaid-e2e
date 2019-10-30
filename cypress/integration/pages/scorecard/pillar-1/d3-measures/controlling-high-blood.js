@@ -15,6 +15,12 @@ export class ControllingHighBlood {
             .and('contain', 'Promote Effective Prevention & Treatment of Chronic Diseases');
     }
 
+    // Viz Title
+    vizTitle() {
+        cy.get('h2')
+            .should('contain', 'Controlling High Blood Pressure');
+    }
+
     // Median Rate
     medianRate() {
         cy.get('.median-text')

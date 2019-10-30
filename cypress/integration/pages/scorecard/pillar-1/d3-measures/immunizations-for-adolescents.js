@@ -15,6 +15,12 @@ export class ImmunizationsAdolescents {
             .and('contain', 'Promote Effective Prevention & Treatment of Chronic Diseases');
     }
 
+    // Viz Title
+    vizTitle() {
+        cy.get('h2')
+            .should('contain', 'Immunizations for Adolescents');
+    }
+
     // Median Rate
     medianRateHPV() {
         cy.get('.median-text')
@@ -138,8 +144,8 @@ export class ImmunizationsAdolescents {
 
     }
 
-     // HPV
-     toggleHPV() {
+    // HPV
+    toggleHPV() {
         cy.get('.radio-button-text')
             .contains('HPV')
             .click();
@@ -148,8 +154,8 @@ export class ImmunizationsAdolescents {
     // Combination 1
     toggleCombination() {
         cy.get('.radio-button-text')
-        .contains('Combination 1')
-        .click();
+            .contains('Combination 1')
+            .click();
     }
 
     // State Specific Comments

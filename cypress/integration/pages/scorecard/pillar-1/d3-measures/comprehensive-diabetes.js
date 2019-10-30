@@ -15,6 +15,12 @@ export class ComprehensiveDiabetes {
             .and('contain', 'Promote Effective Prevention & Treatment of Chronic Diseases');
     }
 
+    // Viz Title
+    vizTitle() {
+        cy.get('h2')
+            .should('contain', 'Comprehensive Diabetes Care: Hemoglobin A1c (HbA1c) Poor Control (>9.0%)');
+    }
+
     // Median Rate
     medianRate() {
         cy.get('.median-text')

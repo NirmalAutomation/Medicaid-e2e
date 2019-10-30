@@ -12,7 +12,8 @@ export class RightNavBlock {
 
     clickMedicaidLogo() {
         cy.get('.pillarNavLogo')
-            .click();
+            .eq(0)
+            .click({ force: true });
     }
 
     selectNCLink() {

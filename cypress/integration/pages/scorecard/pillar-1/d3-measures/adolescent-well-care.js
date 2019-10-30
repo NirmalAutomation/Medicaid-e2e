@@ -15,6 +15,12 @@ export class AdolescentWell {
             .and('contain', 'Promote Effective Prevention & Treatment of Chronic Diseases');
     }
 
+    // Viz Title
+    vizTitle() {
+        cy.get('h2')
+            .should('contain', 'Adolescent Well-Care Visits');
+    }
+
     // Median Rate
     medianRate() {
         cy.get('.median-text')

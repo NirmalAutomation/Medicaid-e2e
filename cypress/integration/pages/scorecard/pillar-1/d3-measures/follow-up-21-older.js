@@ -15,6 +15,12 @@ export class FollowUp21Older {
             .and('contain', 'Promote Effective Communication & Coordination of Care');
     }
 
+    // Viz Title
+    vizTitle() {
+        cy.get('h2')
+            .should('contain', 'Follow-Up After Hospitalization for Mental Illness: Age 21 & Older');
+    }
+
     // Median Rate
     medianRate7Day() {
         cy.get('.median-text')
