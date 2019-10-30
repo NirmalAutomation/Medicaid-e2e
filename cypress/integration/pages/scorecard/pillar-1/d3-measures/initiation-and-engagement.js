@@ -83,7 +83,77 @@ export class InitiationEngagement {
             .and('contain', 'NR');
     }
 
+    totalAODTitle() {
+        cy.get('h2')
+            .should('contain', 'Total AOD Abuse or Dependence');
 
+    }
+
+    totalAODMedianRateInitiation() {
+        cy.get('.median-text')
+            .should('contain', 'Median - 40.0%');
+
+    }
+
+    totalAODMedianRateEngagement() {
+        cy.get('.median-text')
+            .should('contain', 'Median - 14.5%');
+
+    }
+
+    alcoholAbuseTitle() {
+        cy.get('h2')
+            .should('contain', 'Alcohol Abuse or Dependence');
+
+    }
+
+    alcoholAbuseMedianRateInitiation() {
+        cy.get('.median-text')
+            .should('contain', 'Median - 38.8%');
+
+    }
+
+    alcoholAbuseMedianRateEngagement() {
+        cy.get('.median-text')
+            .should('contain', 'Median - 11.6%');
+
+    }
+
+    opioidAbuseTitle() {
+        cy.get('h2')
+            .should('contain', 'Opioid Abuse or Dependence');
+
+    }
+
+    opioidAbuseMedianRateInitiation() {
+        cy.get('.median-text')
+            .should('contain', 'Median - 46.3%');
+
+    }
+
+    opioidAbuseMedianRateEngagement() {
+        cy.get('.median-text')
+            .should('contain', 'Median - 25.4%');
+
+    }
+
+    otherDrugTitle() {
+        cy.get('h2')
+            .should('contain', 'Other Drug Abuse or Dependence');
+
+    }
+
+    otherDrugMedianRateInitiation() {
+        cy.get('.median-text')
+            .should('contain', 'Median - 38.5%');
+
+    }
+
+    otherDrugMedianRateEngagement() {
+        cy.get('.median-text')
+            .should('contain', 'Median - 11.2%');
+
+    }
 }
 
 export const initiationEngagement = new InitiationEngagement();

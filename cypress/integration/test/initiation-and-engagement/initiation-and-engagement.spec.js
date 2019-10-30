@@ -86,3 +86,57 @@ Then('User clicks on Reset All button', () => {
     pillar1Measure.clickResetAllBtn();
 
 })
+
+When('User inspects the Visualization Total AOD title', () => {
+
+    initiationEngagement.totalAODTitle();
+
+})
+
+When('User validates the Total AOD median rate', () => {
+
+    initiationEngagement.totalAODMedianRateInitiation();
+
+})
+
+Then('User sees 51 states list', () => {
+
+    pillar1Measure.stateListQuality();
+
+})
+
+When('User inspects the Visualization Alcohol Abuse title', () => {
+
+    initiationEngagement.alcoholAbuseTitle();
+
+})
+
+When('User validates the Alcohol Abuse median rate', () => {
+
+    initiationEngagement.totalAODMedianRateInitiation();
+
+})
+
+When('User inspects the Visualization Opioid Abuse title', () => {
+
+    initiationEngagement.opioidAbuseTitle();
+
+})
+
+When('User validates the Opioid Abuse median rate', () => {
+
+    initiationEngagement.opioidAbuseMedianRateInitiation();
+
+})
+
+When('User inspects the Visualization Other Drug Abuse title', () => {
+
+    initiationEngagement.otherDrugTitle();
+
+})
+
+When('User validates the Other Drug Abuse median rate', () => {
+
+    initiationEngagement.otherDrugMedianRateInitiation();
+
+})

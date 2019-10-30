@@ -34,7 +34,7 @@ Cypress.Commands.add('medicaidLanding', () => {
     // cy.visit('');
 
     // Imp
-    //cy.visit('/?ACA=MBtjpurjZFO');
+    cy.visit('/?ACA=MBtjpurjZFO');
 
 })
 
@@ -143,5 +143,3 @@ node { "master" }{
     
 }
 */
-
-
