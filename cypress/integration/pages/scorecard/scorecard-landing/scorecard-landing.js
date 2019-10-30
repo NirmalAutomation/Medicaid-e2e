@@ -94,7 +94,7 @@ export class ScorecardLanding {
             .and('contain', 'PQI 01: Diabetes Short-Term Complications Admission Rate')
             .and('contain', 'Percentage of Eligibles Who Received Preventive Dental Services')
             .and('contain', 'Prenatal & Postpartum Care: Postpartum Care')
-            .and('contain', 'State Use Experience of Care Surveys for Beneficiaries Using Long-Term Services and Supports')
+            .and('contain', 'State Use of Experience of Care Surveys for Beneficiaries Using Long-Term Services and Supports')
             .and('contain', 'Use of Multiple Concurrent Antipsychotics in Children & Adolescents')
             .and('contain', 'Use of Opioids at High Dosage in Persons Without Cancer')
             .and('contain', 'Well-Child Visits in the First 15 Months of Life')

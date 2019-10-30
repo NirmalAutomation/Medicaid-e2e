@@ -9,9 +9,9 @@ beforeEach(() => {
 
 Given('User visits the medicaid home page', () => {
 
-    cy.url().should('eq', 'https://dev.medicaid.gov/');
+    // cy.url().should('eq', 'https://dev.medicaid.gov/');
 
-    // cy.url().should('eq', 'https://imp.medicaid.gov/');
+    cy.url().should('eq', 'https://imp.medicaid.gov/');
 
 })
 
