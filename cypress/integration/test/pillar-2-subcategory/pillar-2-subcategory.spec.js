@@ -2,7 +2,7 @@
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
 import { stateAdministrativeSub } from "../../pages/scorecard/pillar-2/pillar-2-subcateory"
-import { rightNavBlock } from "../../pages/scorecard/right-nav-block";
+import { rightNavBlock } from "../../pages/scorecard/common-helpers/right-nav-block";
 
 beforeEach(() => {
     cy.medicaidLanding();
@@ -235,5 +235,3 @@ Then('User sees the ninth associated measures', () => {
     stateAdministrativeSub.ninthMeasureList();
 
 })
-
-

@@ -2,7 +2,7 @@
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
 import { federalAdministrativeSub } from "../../pages/scorecard/pillar-3/pillar-3-subcategory"
-import { rightNavBlock } from "../../pages/scorecard/right-nav-block";
+import { rightNavBlock } from "../../pages/scorecard/common-helpers/right-nav-block";
 
 beforeEach(() => {
     cy.medicaidLanding();

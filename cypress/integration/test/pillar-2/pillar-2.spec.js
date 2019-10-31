@@ -2,7 +2,7 @@
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
 import { stateAdministrative } from "../../pages/scorecard/pillar-2/pillar-2-page"
-import { rightNavBlock } from "../../pages/scorecard/right-nav-block";
+import { rightNavBlock } from "../../pages/scorecard/common-helpers/right-nav-block";
 
 beforeEach(() => {
     cy.medicaidLanding();
@@ -145,4 +145,3 @@ Then('User sees the Payment Error Rate  Measurement PERM page', () => {
     cy.url().should('include', '/state-overviews/scorecard/payment-error-rate-measurement/index.html');
 
 })
-

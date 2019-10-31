@@ -2,7 +2,7 @@
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
 import { pillar1Domain } from "../../pages/scorecard/pillar-1/pillar-1-domain"
-import { rightNavBlock } from "../../pages/scorecard/right-nav-block";
+import { rightNavBlock } from "../../pages/scorecard/common-helpers/right-nav-block";
 
 beforeEach(() => {
     cy.medicaidLanding();
@@ -229,4 +229,3 @@ Then('User sees the sixth snack size visualization', () => {
     pillar1Domain.percentageAntipsychoticMedicationSnack();
 
 })
-

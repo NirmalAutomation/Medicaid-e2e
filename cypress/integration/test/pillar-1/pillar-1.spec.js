@@ -2,7 +2,7 @@
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
 import { systemHealthSystemPillar } from "../../pages/scorecard/pillar-1/pillar-1-page"
-import { rightNavBlock } from "../../pages/scorecard/right-nav-block";
+import { rightNavBlock } from "../../pages/scorecard/common-helpers/right-nav-block";
 
 beforeEach(() => {
     cy.medicaidLanding();
@@ -138,6 +138,5 @@ Then('User sees the snack size visualization', () => {
     systemHealthSystemPillar.comprehensiveDiabetesCareSnack();
     systemHealthSystemPillar.controllingHighBloodSnack();
     systemHealthSystemPillar.breastCancerSnack();
-    
-})
 
+})
