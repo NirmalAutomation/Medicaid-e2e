@@ -15,6 +15,12 @@ export class PrenatalPostpartum {
             .and('contain', 'Promote Effective Prevention & Treatment of Chronic Diseases');
     }
 
+    // Viz Title
+    vizTitle() {
+        cy.get('h2')
+            .should('contain', 'Prenatal & Postpartum Care: Postpartum Care');
+    }
+
     // Median Rate
     medianRate() {
         cy.get('.median-text')

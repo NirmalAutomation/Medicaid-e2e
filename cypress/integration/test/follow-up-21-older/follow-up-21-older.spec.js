@@ -38,6 +38,11 @@ Then('User sees LEARN MORE link', () => {
 
 })
 
+Then('User sees the viz title', () => {
+
+    followUp21Older.vizTitle();
+
+})
 
 Then('User sees the legend icons', () => {
 

@@ -31,7 +31,7 @@ Cypress.Commands.add('medicaidLanding', () => {
     // cy.visit('/?ACA=JMwCeGV1O8');
 
     // Test
-    // cy.visit('');
+    // cy.visit('/?ACA=WZAmqu2Fl1');
 
     // Imp
     cy.visit('/?ACA=MBtjpurjZFO');
@@ -44,11 +44,7 @@ Cypress.Commands.add('scorecardPageNavigation', () => {
         return false
     })
 
-    // Dev
-    // cy.visit('/?ACA=JMwCeGV1O8');
-
-    // Imp
-    cy.visit('/?ACA=MBtjpurjZFO');
+    cy.visit('/?ACA=JMwCeGV1O8');
 
     cy.get('#block-mainmenu-2')
         .contains('State Overviews').trigger('mousemove')
@@ -131,15 +127,3 @@ Cypress.Commands.add('pillar3PageNavigation', () => {
         })
 
 })
-
-/*
-node { "master" }{
-    
-    git 'https://github.com/NirmalAutomation/e2e-robust.git'
-    
-    set label: "Install NPM package", script: "npm install"
-    
-    set label: "Run test", script: "npx cypress run"
-    
-}
-*/

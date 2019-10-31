@@ -15,6 +15,12 @@ export class WellChildThird {
             .and('contain', 'Promote Effective Prevention & Treatment of Chronic Diseases');
     }
 
+    // Viz Title
+    vizTitle() {
+        cy.get('h2')
+            .should('contain', 'Well-Child Visits in the Third, Fourth, Fifth, and Sixth Years of Life');
+    }
+
     // Median Rate
     medianRate() {
         cy.get('.median-text')

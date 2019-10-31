@@ -38,6 +38,11 @@ Then('User sees LEARN MORE link', () => {
 
 })
 
+Then('User sees the viz title', () => {
+
+    liveBirths.vizTitle();
+
+})
 
 Then('User sees the legend icons', () => {
 

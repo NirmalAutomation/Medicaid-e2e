@@ -15,6 +15,12 @@ export class AntipsychoticsChildren {
             .and('contain', 'Promote Effective Communication & Coordination of Care');
     }
 
+    // Viz Title
+    vizTitle() {
+        cy.get('h2')
+            .should('contain', 'Use of Multiple Concurrent Antipsychotics in Children & Adolescents');
+    }
+
     // Median Rate
     medianRate() {
         cy.get('.median-text')

@@ -15,6 +15,12 @@ export class WellChild15 {
             .and('contain', 'Promote Effective Prevention & Treatment of Chronic Diseases');
     }
 
+    // Viz Title
+    vizTitle() {
+        cy.get('h2')
+            .should('contain', 'Well-Child Visits in the First 15 Months of Life');
+    }
+
     // Median Rate
     medianRate() {
         cy.get('.median-text')

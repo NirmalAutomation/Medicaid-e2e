@@ -8,6 +8,7 @@ Feature: Follow-Up After Hospitalization for Mental Illness: Ages 6-20
         Then User sees VISIT THE PILLAR
         Then User sees VISIT THE DOMAIN
         Then User sees LEARN MORE link
+        Then User sees the viz title
         Then User sees the legend icons
         Then User sees the population types
 

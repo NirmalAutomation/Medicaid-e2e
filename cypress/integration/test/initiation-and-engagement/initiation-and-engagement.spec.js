@@ -38,7 +38,6 @@ Then('User sees LEARN MORE link', () => {
 
 })
 
-
 Then('User sees the legend icons', () => {
 
     pillar1Measure.legendIcons();

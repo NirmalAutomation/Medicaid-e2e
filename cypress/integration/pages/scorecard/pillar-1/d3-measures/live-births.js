@@ -15,6 +15,12 @@ export class LiveBirths {
             .and('contain', 'Promote Effective Prevention & Treatment of Chronic Diseases');
     }
 
+    // Viz Title
+    vizTitle() {
+        cy.get('h2')
+            .should('contain', 'Live Births Weighing Less Than 2,500 Grams');
+    }
+
     // Median Rate
     medianRate() {
         cy.get('.median-text')

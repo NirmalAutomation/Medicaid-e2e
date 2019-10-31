@@ -8,6 +8,7 @@ Feature: Percentage of Long-stay Nursing Home Residents who got an Antipsychotic
         Then User sees VISIT THE PILLAR
         Then User sees VISIT THE DOMAIN
         Then User sees LEARN MORE link
+        Then User sees the viz title
         Then User sees the legend icons
         Then User sees the population types
 

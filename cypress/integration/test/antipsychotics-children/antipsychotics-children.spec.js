@@ -38,6 +38,12 @@ Then('User sees LEARN MORE link', () => {
 
 })
 
+Then('User sees the viz title', () => {
+
+    antipsychoticsChildren.vizTitle();
+
+})
+
 
 Then('User sees the legend icons', () => {
 
