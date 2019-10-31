@@ -18,7 +18,7 @@ export class AntipsychoticMedication {
     // Viz Title
     vizTitle() {
         cy.get('h2')
-            .should('contain', 'Use of Multiple Concurrent Antipsychotics in Children & Adolescents');
+            .should('contain', 'Percentage of Long-stay Nursing Home Residents who got an Antipsychotic Medication');
     }
 
     // Median Rate
